@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fondo claro para contraste */
+}
+
+header {
+    background-color: #333; /* Color oscuro para el encabezado */
+    color: white;
+    padding: 20px;
+}
+
+.header-container {
+    display: flex; /* Usa flexbox para alinear el logo y el título */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: center; /* Centra horizontalmente el contenido del encabezado */
+}
+
+.logo {
+    max-width: 150px; /* Ajusta el tamaño del logo */
+    margin-right: 15px; /* Espacio a la derecha del logo */
+    transition: transform 0.3s; /* Suaviza la transición del efecto */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+}
+
+
+
+header h1 a {
+    color: white; /* Color del título */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 2em; /* Tamaño del título */
+}
+
+
+
+footer {
+    background-color: #333; /* Color oscuro para el pie de página */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio arriba y abajo */
+    position: relative; /* Posición relativa para el pie de página */
+    bottom: 0; /* Asegura que esté al final */
+    width: 100%; /* Ancho completo */
+}
+
+
