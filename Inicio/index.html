@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GadgetZone</title>
 
+    <link rel="icon" href="/Inicio/assets/icono.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="/Inicio/style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-
 </head>
 <body>
 
     <header class="header-container">
-        <img src="/assets/logo.png" alt="GadgetZone Logo" class="logo">
+        <img src="assets/logo.png" alt="GadgetZone Logo" class="logo">
         <h1><a href="/Inicio/index.html">GadgetZone</a></h1>
     </header>
 
@@ -32,7 +32,7 @@
                 <a class="nav-link" href="/Páginas/Productos/productos.html">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">Carrito de compras</a>
+                <a class="nav-link" href="">Reseñas</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/Páginas/Contacto/contacto.html">Contacto</a>
@@ -44,20 +44,89 @@
             </form>
           </div>
         </div>
-      </nav>
+    </nav>
 
-    <main>
+    <main class="main-container">
 
-        <section class="productos">
-
-
-
-        </section>
-
-    </main>
+      <section class="inicio">
+        <h2>Nuestros Productos</h2>
+        <div class="card-container"> <!-- Contenedor para las tarjetas -->
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/celulaes.jpg" class="card-img-top" alt="celulares GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Celulares</h5>
+                    <p class="card-text">Explora nuestra amplia gama de celulares de última generación. Equipados con cámaras de alta resolución, baterías de larga duración y rendimiento excepcional, estos dispositivos son perfectos para mantenerte conectado y capturar tus mejores momentos.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/auriculares.png" class="card-img-top" alt="auriculares GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Auriculares</h5>
+                    <p class="card-text">Disfruta de una experiencia de audio envolvente con nuestros auriculares. Con cancelación de ruido y comodidad ergonómica, son ideales para escuchar música, ver películas o atender llamadas sin distracciones.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/tablets.jpg" class="card-img-top" alt="tablets GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Tablets</h5>
+                    <p class="card-text">Nuestras tablets son perfectas para el entretenimiento y la productividad. Con pantallas táctiles de alta definición y una variedad de aplicaciones, puedes trabajar, jugar y navegar con facilidad y rapidez.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/notebooks.png" class="card-img-top" alt="notebooks GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Notebook</h5>
+                    <p class="card-text">Nuestras notebooks ofrecen un rendimiento potente en un diseño portátil. Ideales para estudiantes y profesionales, cuentan con procesadores rápidos y almacenamiento amplio para todas tus necesidades.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/mouse.png" class="card-img-top" alt="mouse GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Mouse</h5>
+                    <p class="card-text">Mejora tu experiencia de uso con nuestros mouse ergonómicos. Con tecnología de precisión y diseño cómodo, son ideales para el trabajo diario y sesiones de gaming.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+            <div class="card" style="width: 18rem;">
+                <img src="/Inicio/assets/teclados.jpg" class="card-img-top" alt="teclados GadgetZone">
+                <div class="card-body">
+                    <h5 class="card-title">Teclados</h5>
+                    <p class="card-text">Nuestros teclados combinan diseño moderno y funcionalidad. Con retroiluminación y teclas cómodas, son ideales tanto para el trabajo como para el juego.</p>
+                    <a href="/Páginas/Productos/" class="btn btn-primary">Ver productos</a>
+                </div>
+            </div>
+    
+        </div>
+    </section>
     
 
-    <footer>@Copyright 2024</footer>
+    <section class="ubicacion">
+
+      <h2>Nuestra Ubicación</h2>
+
+      <div class="mapa">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15573.958509357204!2d-58.657274352116026!3d-34.64644002847453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc76058aa0bc9%3A0xbad6ebdee06fd568!2sHF%20TECNOLOG%C3%8DA!5e1!3m2!1ses-419!2sar!4v1727985456577!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+          
+    </section>
+
+    </main>
+
+    <footer class="text-center mt-4">
+        <p>@Copyright 2024</p>
+    </footer>
 
 </body>
 </html>

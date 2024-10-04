@@ -48,3 +48,50 @@ footer {
 }
 
 
+.inicio {
+    display: flex;                /* Usar Flexbox */
+    flex-direction: column;       /* Alinea verticalmente los hijos */
+    align-items: center;          /* Centrar horizontalmente */
+    margin-top: 60px;            /* Margen superior */
+}
+
+.card-container {
+    display: flex;                /* Usar Flexbox para las tarjetas */
+    justify-content: center;      /* Centrar horizontalmente las tarjetas */
+    flex-wrap: wrap;             /* Permitir el salto de línea de los elementos hijos */
+    gap: 100px;                   /* Espacio entre tarjetas (ajusta según sea necesario) */
+    margin-bottom: 100px;
+}
+
+.card {
+    flex: 1 1 calc(33.333% - 20px); /* Toma el 33.333% del ancho del contenedor menos el espacio entre tarjetas */
+    max-width: 400px;              /* Ancho máximo de cada tarjeta */
+}
+
+.inicio h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 100px;
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
+}
+
+.ubicacion h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card img {
+    width: 100%;           /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: 300px;         /* Define una altura fija para todas las imágenes */
+    object-fit: cover;     /* Asegura que la imagen se recorte adecuadamente y mantenga la proporción */
+}
+
+
+
+
+
