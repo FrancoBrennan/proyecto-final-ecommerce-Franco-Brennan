@@ -2,129 +2,289 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Fondo claro para contraste */
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  
 }
 
 header {
-  background-color: #333; /* Color oscuro para el encabezado */
+  background-color: #201f1f;
   color: white;
-  padding: 20px;
-  height: 120px;
-}
-
-.header {
-  max-width: 40%;
-}
-
-.header-container {
+  /* height: 15vh; */
   display: flex; /* Usa flexbox para alinear el logo y el título */
   align-items: center; /* Centra verticalmente los elementos */
-  justify-content: center; /* Centra horizontalmente el contenido del encabezado */
+  justify-content: space-between; /* Centra horizontalmente el contenido del encabezado */
+  padding: 2rem;
+  height: 3vh;
 }
 
 .logo {
-  max-width: 150px; /* Ajusta el tamaño del logo */
-  margin-right: 15px; /* Espacio a la derecha del logo */
+  max-width: 25vw; /* Ajusta el tamaño del logo */
   transition: transform 0.3s; /* Suaviza la transición del efecto */
 }
+
 
 .logo:hover {
   transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
 }
 
 .carrito-compras {
-  max-width: 60px;
+  font-size: 1.6rem;
+  color: #ffffff;
 }
 
-.home {
-  margin-bottom: 100px;
+.icono-buscar{
+  font-size: 1.5rem;
+  background-color: transparent;
+  display: block;
+  border: 0;
+  color: #ffffff;
 }
 
-header h1 a {
-  color: white; /* Color del título */
-  text-decoration: none; /* Sin subrayado */
-  font-size: 2em; /* Tamaño del título */
+.icono-buscar.invisible{
+  opacity: 0;
+  visibility: hidden;
 }
 
-footer {
-  background-color: #333; /* Color oscuro para el pie de página */
-  color: white; /* Color del texto */
-  text-align: center; /* Centra el texto */
-  padding: 10px 0; /* Espacio arriba y abajo */
-  position: relative; /* Posición relativa para el pie de página */
-  bottom: 0; /* Asegura que esté al final */
-  width: 100%; /* Ancho completo */
-}
-
-.productos {
-  display: flex; /* Usar Flexbox */
-  flex-direction: column; /* Alinea verticalmente los hijos */
-  align-items: center; /* Centrar horizontalmente */
-  margin-top: 60px; /* Margen superior */
-}
-
-.card-container {
-  display: flex; /* Usar Flexbox para las tarjetas */
-  justify-content: center; /* Centrar horizontalmente las tarjetas */
-  flex-wrap: wrap; /* Permitir el salto de línea de los elementos hijos */
-  gap: 100px; /* Espacio entre tarjetas (ajusta según sea necesario) */
-  margin-bottom: 100px;
-}
-
-.card {
-  flex: 1 1 calc(33.333% - 20px); /* Toma el 33.333% del ancho del contenedor menos el espacio entre tarjetas */
-  max-width: 400px; /* Ancho máximo de cada tarjeta */
+.nav-list {
+  list-style-type: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribuye el contenido para que el botón quede en la parte inferior */
-  height: 100%; /* Asegura que las tarjetas tengan el mismo tamaño en altura */
+  align-items: end;
+  gap: 1rem;
 }
 
-.card-body {
-  flex-grow: 1; /* Permite que el contenido del cuerpo de la tarjeta ocupe el espacio disponible */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.nav-list li a {
+  text-decoration: none;
+  color: #ececec;
 }
 
-.card-text {
-  flex-grow: 1; /* Hace que el texto ocupe el espacio disponible entre el título y el botón */
+.abrir-menu,
+.cerrar-menu {
+  display: block;
+  border: 0;
+  
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.card-title {
-  text-align: center;
-}
-
-.btn {
-  align-self: center; /* Centra el botón horizontalmente */
-  margin-top: 15px; /* Añade un poco de espacio arriba del botón */
-}
-
-.productos h2 {
+.abrir-menu {
+  color: #f8f3f3;
   font-size: 2rem;
-  color: #333;
-  margin-bottom: 100px;
 }
 
-.mapa {
+.cerrar-menu {
+  color: #ececec;
+  margin-top: 4.2vh;
+  font-size: 1.5rem;
+}
+
+.nav {
+  opacity: 0;
+  visibility: hidden;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: end;
+  gap: 1rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1c1c1c;
+  padding: 2rem;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  z-index: 100;
+  right: -100%; /* El menú comienza fuera de la pantalla */
+  transition: right 0.3s ease, opacity 0.3s ease; /* Transición suave */
 }
 
-.ubicacion h2 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-}
-
-.card img {
-  width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
-  height: 300px; /* Define una altura fija para todas las imágenes */
-  object-fit: cover; /* Asegura que la imagen se recorte adecuadamente y mantenga la proporción */
+.nav.visible {
+  right: 0; /* El menú se desliza dentro de la pantalla */
+  opacity: 1;
+  visibility: visible;
 }
 
 .carousel-item img {
   width: 100%;
-  height: 600px;
+  height: 15vh;
   object-fit: cover;
 }
+
+
+.productos h2{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.card-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+}
+
+.card{
+  width: 80vw;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
+  margin: 1rem;  
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+
+.card-content{
+  padding: 1rem;
+}
+
+.card-content h3{
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.card-content p{
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.card-content .btn{
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #333;
+  text-decoration: none;
+  border-radius: 0.2rem;
+  color: #fff;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info{
+  display: flex;
+  align-items: center;
+}
+
+.info-icono{
+  color: #FF4500; /* Color naranja similar al de la imagen */
+  font-size: 6vh; /* Tamaño del ícono */
+  margin-right: 2vh; /* Espacio entre el ícono y el texto */
+  margin-left: 2vh;
+}
+
+.info-texto{
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333; /* Color del título */
+}
+
+.info-texto p{
+  margin: 0;
+  color: #666; /* Color del subtítulo */
+  font-size: 0.9rem;
+}
+
+.info-texto h5{
+    margin-bottom: 0;
+}
+
+.consultas-container{
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  gap: 	2vh;
+  align-items: center;
+}
+
+.consulta{
+  margin: 0;
+  border: 0.1vh solid black;
+  border-radius: 1vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15vh;
+  width: 90%;
+  padding: 2vh;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s; 
+  color: black;
+}
+
+.consulta:hover{
+  transform: scale(1.05); 
+}
+
+.consulta h6{
+  align-content: center;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 0;
+}
+
+.consulta i{
+    font-size: 6vh;
+    margin: 0;
+    color: #1c1c1c;
+}
+
+.consulta a {
+  display: flex; /* Asegura que el enlace ocupe todo el espacio del div */
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Quitar subrayado del enlace */
+  height: 100%; /* Asegura que el enlace ocupe toda la altura del contenedor */
+  margin-top: 0;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  .abrir-menu,
+  .cerrar-menu {
+      display: none;
+  }
+
+  .nav {
+      opacity: 1;
+      visibility: visible;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 1rem;
+  }
+
+  .nav-list li a {
+      color: #ffffff;
+  }
+}
+
+footer {
+  background-color: #201f1f; /* Color oscuro para el pie de página */
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el texto */
+  padding: 2vh 0; /* Espacio arriba y abajo */
+  width: 100%; /* Ancho completo */
+  z-index: 10;
+  margin-top: 5vh;
+}
+
+.footer-info{
+  border-top: 0.5px solid white
+}
+
+
