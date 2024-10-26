@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .sobre-nosotros{
+    background: #24303c;
+    color: white;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh;
+  }
+
+  .sobre-nosotros img{
+    width: 90%;
+    max-height: 30vh;
+    object-fit: cover;
+    margin-bottom: 3vh;
+  }
+
+  .texto {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 80%; /* Ancho ajustable */
+    margin-bottom: 20px; /* Espacio entre la sección de texto y las reseñas */
+}
+
+.reseñas{
+    background-color: #24303c;
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto;
+    gap: 1em;
+    padding-bottom: 4vh;
+}
+
+.reseñas h3{
+    margin: 2vh;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.item-reseñas{
+    border:#BABAC4 solid 0.01px;
+    width: 90%;
+    border-radius: 1vh;
+    background-color: white;
+    color: black;
+}
+
+.item-reseñas img{
+    width: 15vh;
+}
+
+.producto{
+    display: flex;
+    flex-direction: row;
+}
+
+.estrellas{
+    color: rgb(235, 195, 16);
+    font-size: 2.5vh;
+}

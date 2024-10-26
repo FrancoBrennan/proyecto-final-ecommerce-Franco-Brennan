@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  .form-contact {
+    width: 90vw;
+    background: #24303c;
+    padding: 5vh;
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: 0.5rem;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 1px 3px 20px #000;
+  }
+  
+  .form-contact h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #24303c;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 1.2rem;
+    color: white;
+  }
+  
+  .form-contact .boton {
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 1rem;
+    color: white;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.form-contact{
+    margin-bottom: 10vh;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-left: 3px solid #7ed321; /* Green border similar to the image */
+    background-color: #f9f9f9;
+    border-bottom: #BABAC4 solid 0.01px;
+}
+
+.contact-item p{
+    margin-left: 5vw;
+    margin-bottom: 0;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+i{
+    font-size: 3vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 0;
+}
+
+.info {
+    flex-direction: row;
+}
+
+.phone-number {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.schedule-info {
+    padding-left: 10px;
+    border-left: 3px solid #7ed321;
+}
+
+  footer {
+    background-color: #201f1f; /* Color oscuro para el pie de página */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 2vh 0; /* Espacio arriba y abajo */
+    width: 100%; /* Ancho completo */
+    margin-top: 5vh;
+  }

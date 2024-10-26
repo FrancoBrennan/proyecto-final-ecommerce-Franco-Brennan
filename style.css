@@ -196,11 +196,12 @@ header {
 }
 
 .consultas-container{
-  margin-top: 4vh;
+  margin-top: 6vh;
   display: flex;
   flex-direction: column;
   gap: 	2vh;
   align-items: center;
+  margin-bottom: 4vh;
 }
 
 .consulta{
@@ -280,7 +281,6 @@ footer {
   padding: 2vh 0; /* Espacio arriba y abajo */
   width: 100%; /* Ancho completo */
   z-index: 10;
-  margin-top: 5vh;
 }
 
 .footer-info{
