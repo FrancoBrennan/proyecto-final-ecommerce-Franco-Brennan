@@ -3,15 +3,113 @@
     padding: 0;
     box-sizing: border-box;
   }
+
+  header {
+    background-color: #201f1f;
+    color: white;
+    /* height: 15vh; */
+    display: flex; /* Usa flexbox para alinear el logo y el título */
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Centra horizontalmente el contenido del encabezado */
+    padding: 2rem;
+    height: 3vh;
+  }
+  
+  .logo {
+    max-width: 25vw; /* Ajusta el tamaño del logo */
+    transition: transform 0.3s; /* Suaviza la transición del efecto */
+  }
+  
+  
+  .logo:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+  }
+  
+  .carrito-compras {
+    font-size: 1.6rem;
+    color: #ffffff;
+  }
+  
+  .icono-buscar{
+    font-size: 1.5rem;
+    background-color: transparent;
+    display: block;
+    border: 0;
+    color: #ffffff;
+  }
+  
+  .icono-buscar.invisible{
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+  }
+  
+  .nav-list li a {
+    text-decoration: none;
+    color: #ececec;
+  }
+  
+  .abrir-menu,
+  .cerrar-menu {
+    display: block;
+    border: 0;
+    
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .abrir-menu {
+    color: #f8f3f3;
+    font-size: 2rem;
+  }
+  
+  .cerrar-menu {
+    color: #ececec;
+    margin-top: 4.2vh;
+    font-size: 1.5rem;
+  }
+  
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    z-index: 100;
+    right: -100%; /* El menú comienza fuera de la pantalla */
+    transition: right 0.3s ease, opacity 0.3s ease; /* Transición suave */
+  }
+  
+  .nav.visible {
+    right: 0; /* El menú se desliza dentro de la pantalla */
+    opacity: 1;
+    visibility: visible;
+  }
   
   
   .form-contact {
     width: 90vw;
+    height: auto;
     background: #24303c;
     padding: 5vh;
     margin: auto;
     margin-top: 5vh;
-    border-radius: 0.5rem;
+    border-radius: 1.5rem;
     font-family: 'calibri';
     color: white;
     box-shadow: 1px 3px 20px #000;
@@ -20,6 +118,7 @@
   .form-contact h4 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .controls {
@@ -31,6 +130,10 @@
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 1.2rem;
+    color: white;
+  }
+
+  .controls option{
     color: white;
   }
   
@@ -50,7 +153,7 @@
 }
 
 .form-contact{
-    margin-bottom: 10vh;
+  margin-bottom: 6vh;
 }
 
 .contact-item {
@@ -73,7 +176,7 @@
     margin-right: 10px;
 }
 
-i{
+.contact-item i{
     font-size: 3vh;
     margin-left: 5vw;
     margin-right: 5vw;
@@ -94,11 +197,53 @@ i{
     border-left: 3px solid #7ed321;
 }
 
-  footer {
-    background-color: #201f1f; /* Color oscuro para el pie de página */
-    color: white; /* Color del texto */
-    text-align: center; /* Centra el texto */
-    padding: 2vh 0; /* Espacio arriba y abajo */
-    width: 100%; /* Ancho completo */
-    margin-top: 5vh;
-  }
+footer {
+  margin-top: 6vh;
+  background-color: #201f1f; 
+  color: white; 
+  padding-top: 2vh; 
+  width: 100%; 
+  z-index: 10;
+}
+
+.footer-info{
+  border-bottom: 0.5px solid white;
+}
+
+.footer-info h5{
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.footer-info a{
+  text-decoration: none;
+  color: white;
+}
+
+.redes-sociales{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin-bottom: 2vh;
+}
+
+.redes-sociales i{
+  font-size: 5vh;
+}
+
+.copyright p{
+  text-align: center;
+  justify-content: center;
+  padding: 2vh 2vh;
+}
+
+.lista-footer{
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 5vw;
+}

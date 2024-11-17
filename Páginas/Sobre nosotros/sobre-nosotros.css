@@ -26,8 +26,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    width: 80%; /* Ancho ajustable */
-    margin-bottom: 20px; /* Espacio entre la sección de texto y las reseñas */
+    width: 80%;
+    margin-bottom: 20px;
 }
 
 .reseñas{
@@ -35,7 +35,6 @@
     height: auto;
     display: grid;
     justify-items: center;
-    grid-template-columns: auto;
     gap: 1em;
     padding-bottom: 4vh;
 }
@@ -46,24 +45,83 @@
     color: white;
 }
 
-.item-reseñas{
+.item-reseñas-container{
     border:#BABAC4 solid 0.01px;
     width: 90%;
     border-radius: 1vh;
     background-color: white;
     color: black;
+    display: block;
+    text-align: center;
 }
 
-.item-reseñas img{
-    width: 15vh;
+.producto img{
+    width: 25vh;
+    border-radius: 10%;
 }
 
-.producto{
-    display: flex;
-    flex-direction: row;
+.producto  h5{
+    align-self: center;
+    font-size: em;
 }
 
-.estrellas{
+.producto p{
     color: rgb(235, 195, 16);
     font-size: 2.5vh;
 }
+
+.reseña-texto{
+    text-align: start;
+    margin-left: 5vw;
+}
+
+footer {
+    background-color: #201f1f; 
+    color: white; 
+    padding-top: 2vh; 
+    width: 100%; 
+    z-index: 10;
+  }
+  
+  .footer-info{
+    border-bottom: 0.5px solid white;
+  }
+  
+  .footer-info h5{
+    margin-top: 1vh;
+    text-align: center;
+  }
+  
+  .footer-info a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .redes-sociales{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-bottom: 2vh;
+  }
+  
+  .redes-sociales i{
+    font-size: 5vh;
+  }
+  
+  .copyright p{
+    text-align: center;
+    justify-content: center;
+    padding: 2vh 2vh;
+  }
+  
+  .lista-footer{
+    list-style-type: none;
+    justify-content: center;
+    padding: 0;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 2.5vw;
+  }
+

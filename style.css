@@ -143,7 +143,7 @@ header {
 
 .card-content h3{
   font-size: 1.5rem;
-  margin-bottom: 0;
+  margin-bottom: 1vh;
   margin-top: 0;
 }
 
@@ -245,6 +245,113 @@ header {
   margin-top: 0;
 }
 
+footer {
+  background-color: #201f1f; 
+  color: white; 
+  padding-top: 2vh; 
+  width: 100%; 
+  z-index: 10;
+}
+
+.footer-info{
+  border-bottom: 0.5px solid white;
+}
+
+.footer-info h5{
+  margin-top: 1vh;
+  text-align: center;
+}
+
+.footer-info a{
+  text-decoration: none;
+  color: white;
+}
+
+.redes-sociales{
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  margin-bottom: 2vh;
+}
+
+.redes-sociales i{
+  font-size: 5vh;
+}
+
+.copyright p{
+  text-align: center;
+  justify-content: center;
+  padding: 2vh 2vh;
+}
+
+.lista-footer{
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+  font-size: 0.9rem;
+  display: flex;
+  gap: 5vw;
+}
+
+
+@media screen and (min-width: 425px) {
+
+  /* Establece el ancho y la altura del carrusel */
+#carouselExampleAutoplaying {
+  width: 100%; /* Ajusta el ancho del carrusel (porcentaje o píxeles) */
+  height: 180px; /* Ajusta la altura del carrusel */
+}
+
+/* Ajusta el tamaño de las imágenes dentro del carrusel */
+#carouselExampleAutoplaying .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del carrusel */
+}
+
+.logo {
+  max-width: 20vw; /* Ajusta el tamaño del logo */
+}
+
+
+}
+
+@media screen and (min-width: 768px) {
+  .logo {
+    max-width: 15vw; /* Ajusta el tamaño del logo */
+  }
+
+  header{
+    height: 12vh;
+  }
+
+}
+
+/* Dispositivos grandes (escritorio) */
+@media (min-width: 992px) {
+  #carouselExampleAutoplaying {
+      height: 500px; /* Altura óptima para escritorio */
+  }
+
+  header{
+    height: 15vh;
+  }
+
+  .icono-buscar{
+
+    display: none;
+
+  }
+
+
+  .nav-list{
+    align-items: center;
+  }
+
+}
+
 
 @media screen and (min-width: 1024px) {
 
@@ -274,17 +381,6 @@ header {
   }
 }
 
-footer {
-  background-color: #201f1f; /* Color oscuro para el pie de página */
-  color: white; /* Color del texto */
-  text-align: center; /* Centra el texto */
-  padding: 2vh 0; /* Espacio arriba y abajo */
-  width: 100%; /* Ancho completo */
-  z-index: 10;
-}
 
-.footer-info{
-  border-top: 0.5px solid white
-}
 
 
