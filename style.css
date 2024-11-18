@@ -104,6 +104,25 @@ header {
   visibility: visible;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 99;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+
 .carousel-item img {
   width: 100%;
   height: 15vh;
@@ -125,6 +144,7 @@ header {
 
 .card{
   width: 80vw;
+  max-width: 300px;
   background-color: #ffffff;
   border-radius: 0.5rem;
   overflow: hidden;
@@ -173,9 +193,9 @@ header {
 }
 
 .info-icono{
-  color: #FF4500; /* Color naranja similar al de la imagen */
-  font-size: 6vh; /* Tamaño del ícono */
-  margin-right: 2vh; /* Espacio entre el ícono y el texto */
+  color: #FF4500;
+  font-size: 6vh; 
+  margin-right: 2vh; 
   margin-left: 2vh;
 }
 
@@ -296,23 +316,18 @@ footer {
 }
 
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 424px) {
 
-  /* Establece el ancho y la altura del carrusel */
-#carouselExampleAutoplaying {
-  width: 100%; /* Ajusta el ancho del carrusel (porcentaje o píxeles) */
-  height: 180px; /* Ajusta la altura del carrusel */
-}
 
-/* Ajusta el tamaño de las imágenes dentro del carrusel */
+
 #carouselExampleAutoplaying .carousel-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen al tamaño del carrusel */
+  height: 20vh;
+  object-fit: cover; 
 }
 
 .logo {
-  max-width: 20vw; /* Ajusta el tamaño del logo */
+  max-width: 20vw; 
 }
 
 
@@ -320,34 +335,131 @@ footer {
 
 @media screen and (min-width: 768px) {
   .logo {
-    max-width: 15vw; /* Ajusta el tamaño del logo */
-  }
-
-  header{
-    height: 12vh;
-  }
-
-}
-
-/* Dispositivos grandes (escritorio) */
-@media (min-width: 992px) {
-  #carouselExampleAutoplaying {
-      height: 500px; /* Altura óptima para escritorio */
+    max-width: 20vw; 
   }
 
   header{
     height: 15vh;
   }
 
+  header button, i{
+    font-size: 3rem;
+  }
+
+  #carouselExampleAutoplaying {
+    margin-bottom: 4vh;
+  }
+
+  #carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover; 
+  }
+
+  .productos h2{
+    font-size: 2rem;
+  }
+
+  .productos-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .info-container{
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .info{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2vw;
+    width: 30vw;
+  }
+
+  #envios-info{
+    border-left: 0.3px solid rgb(0, 0, 0);
+    border-right: 0.3px solid rgb(0, 0, 0);
+    padding: 0 1vw;
+    width: 35vw;
+  }
+
+  .info-icono i{
+    font-size: 8vh;
+  }
+
+  .info-texto p{
+    font-size: 1rem;
+  }
+
+}
+
+@media (min-width: 992px) {
+  
+  header{
+    height: 16vh;
+  }
+
+  .logo {
+    width: 16vw; 
+  }
+
+  header li{
+    font-size: 2rem;
+  }
+
   .icono-buscar{
-
     display: none;
+  }
 
+  #carouselExampleAutoplaying .carousel-item img {
+    height: 45vh; 
   }
 
 
   .nav-list{
     align-items: center;
+  }
+
+  .abrir-menu,
+  .cerrar-menu {
+      display: none;
+  }
+
+  .nav {
+      opacity: 1;
+      visibility: visible;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      box-shadow: none;
+      background-color: transparent;
+      padding: 0;
+  }
+
+  .nav-list {
+      flex-direction: row;
+      gap: 1rem;
+  }
+
+  .nav-list li a {
+      color: #ffffff;
+  }
+
+  .productos-container{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .consultas-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    gap: 2vw;
+    padding: 0 2vh 2vw 2vw;
   }
 
 }
@@ -378,6 +490,17 @@ footer {
 
   .nav-list li a {
       color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .logo {
+    width: 12vw; 
+  }
+
+  #carouselExampleAutoplaying .carousel-item img {
+    height: 69vh; 
   }
 }
 

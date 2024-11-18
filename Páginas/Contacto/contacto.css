@@ -100,6 +100,24 @@
     opacity: 1;
     visibility: visible;
   }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 99;
+    transition: opacity 0.3s ease;
+  }
+  
+  .overlay.visible {
+    visibility: visible;
+    opacity: 1;
+  }
   
   
   .form-contact {
