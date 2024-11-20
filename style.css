@@ -143,6 +143,9 @@ header {
 }
 
 .card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 80vw;
   max-width: 300px;
   background-color: #ffffff;
@@ -154,7 +157,7 @@ header {
 
 .card img{
   width: 100%;
-  height: auto;
+  max-height: 30vh;
 }
 
 .card-content{
@@ -456,10 +459,14 @@ footer {
   .consultas-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     justify-items: center;
-    gap: 2vw;
     padding: 0 2vh 2vw 2vw;
+    width: 80vw;
+  }
+
+  .consultas{
+    display: flex;
+    justify-content: center;
   }
 
 }
@@ -496,11 +503,16 @@ footer {
 @media screen and (min-width: 1440px) {
 
   .logo {
-    width: 12vw; 
+    width: 10vw; 
   }
 
   #carouselExampleAutoplaying .carousel-item img {
     height: 69vh; 
+  }
+
+  .consultas-container{
+    width: 90vw;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

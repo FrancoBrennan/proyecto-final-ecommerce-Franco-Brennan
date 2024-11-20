@@ -140,7 +140,11 @@ body {
   }
   
   .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 80vw;
+    max-width: 300px;
     background-color: #ffffff;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -177,6 +181,7 @@ body {
     grid-template-columns: auto max-content;
     align-items: center;
     min-height: 40px;
+    margin-top: auto;
   }
 
   .card-precio b{
@@ -191,7 +196,7 @@ body {
     color: #fff;
     font-size: 1.3rem;
     border: none; 
-    cursor: pointer; 
+    cursor: pointer;
   }
 
   footer {
@@ -243,3 +248,139 @@ body {
     display: flex;
     gap: 5vw;
   }
+
+
+  @media screen and (min-width: 424px) {
+
+
+
+    
+    
+    .logo {
+      max-width: 20vw; 
+    }
+    
+    
+    }
+    
+    @media screen and (min-width: 768px) {
+      .logo {
+        max-width: 20vw; 
+      }
+    
+      header{
+        height: 15vh;
+      }
+    
+      header button, i{
+        font-size: 3rem;
+      }
+    
+      .productos h2{
+        font-size: 2rem;
+      }
+    
+      .productos-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .boton-agregar-carrito i{
+        font-size: 1.6rem;
+      }
+    
+    }
+    
+    @media (min-width: 992px) {
+      
+      header{
+        height: 16vh;
+      }
+    
+      .logo {
+        width: 16vw; 
+      }
+    
+      header li{
+        font-size: 2rem;
+      }
+    
+      .icono-buscar{
+        display: none;
+      }
+  
+      .nav-list{
+        align-items: center;
+      }
+    
+      .abrir-menu,
+      .cerrar-menu {
+          display: none;
+      }
+    
+      .nav {
+          opacity: 1;
+          visibility: visible;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          box-shadow: none;
+          background-color: transparent;
+          padding: 0;
+      }
+    
+      .nav-list {
+          flex-direction: row;
+          gap: 1rem;
+      }
+    
+      .nav-list li a {
+          color: #ffffff;
+      }
+    
+      .productos-container{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    
+    }
+    
+    
+    @media screen and (min-width: 1024px) {
+    
+      .abrir-menu,
+      .cerrar-menu {
+          display: none;
+      }
+    
+      .nav {
+          opacity: 1;
+          visibility: visible;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          box-shadow: none;
+          background-color: transparent;
+          padding: 0;
+      }
+    
+      .nav-list {
+          flex-direction: row;
+          gap: 1rem;
+      }
+    
+      .nav-list li a {
+          color: #ffffff;
+      }
+    }
+    
+    @media screen and (min-width: 1440px) {
+    
+      .logo {
+        width: 10vw; 
+      }
+
+      .productos-container{
+        grid-template-columns: repeat(4, 1fr);
+      }
+    
+    }
