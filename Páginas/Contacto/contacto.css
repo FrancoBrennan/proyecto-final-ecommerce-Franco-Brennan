@@ -122,6 +122,7 @@
   
   .form-contact {
     width: 90vw;
+    max-width: 500px;
     height: auto;
     background: #24303c;
     padding: 5vh;
@@ -174,6 +175,11 @@
   margin-bottom: 6vh;
 }
 
+.contact-container{
+  display: flex;
+  flex-direction: column;
+}
+
 .contact-item {
     display: flex;
     flex-direction: column;
@@ -199,6 +205,10 @@
     margin-left: 5vw;
     margin-right: 5vw;
     margin-top: 0;
+}
+
+.contacto{
+  margin-top: 10vh;
 }
 
 .info {
@@ -265,3 +275,153 @@ footer {
   display: flex;
   gap: 5vw;
 }
+
+
+@media screen and (min-width: 424px) {
+  
+  .logo {
+    max-width: 20vw; 
+  }
+  
+  }
+  
+  @media screen and (min-width: 768px) {
+    .logo {
+      max-width: 20vw; 
+    }
+  
+    header{
+      height: 15vh;
+    }
+  
+    header button, i{
+      font-size: 3rem;
+    }
+
+    .contact-container{
+      flex-direction: row;
+    }
+  
+    .contact-item p {
+      margin-left: 0;
+    }
+
+    .contact-item i {
+      font-size: 3vh;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      margin-top: 0;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      padding: 3vh;
+  }
+
+    .contact-container{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .schedule-info p{
+      margin-top: 1vh;
+    }
+
+    #comunicate-con-nosotros{
+      border-left: none;
+    }
+  
+  }
+  
+  @media (min-width: 992px) {
+    
+    header{
+      height: 16vh;
+    }
+  
+    .logo {
+      width: 16vw; 
+    }
+  
+    header li{
+      font-size: 2rem;
+    }
+  
+    .icono-buscar{
+      display: none;
+    }
+  
+    .nav-list{
+      align-items: center;
+    }
+  
+    .abrir-menu,
+    .cerrar-menu {
+        display: none;
+    }
+  
+    .nav {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+  
+    .nav-list {
+        flex-direction: row;
+        gap: 1rem;
+    }
+  
+    .nav-list li a {
+        color: #ffffff;
+    }
+  
+    
+  
+  }
+  
+  
+  @media screen and (min-width: 1024px) {
+  
+    .abrir-menu,
+    .cerrar-menu {
+        display: none;
+    }
+  
+    .nav {
+        opacity: 1;
+        visibility: visible;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+    }
+  
+    .nav-list {
+        flex-direction: row;
+        gap: 1rem;
+    }
+  
+    .nav-list li a {
+        color: #ffffff;
+    }
+  }
+  
+  @media screen and (min-width: 1440px) {
+  
+    .logo {
+      width: 10vw; 
+    }
+  
+    
+  
+    
+  }
