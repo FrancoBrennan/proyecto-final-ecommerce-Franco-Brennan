@@ -167,10 +167,11 @@
 }
 
 .item-reseñas-container{
-    border:#BABAC4 solid 0.01px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
     width: 80%;
     max-width: 300px;
-    border-radius: 1vh;
     background-color: white;
     color: black;
     display: block;
@@ -194,7 +195,8 @@
 
 .reseña-texto p{
     text-align: start;
-    margin-left: 5vw;
+    margin-left: 3vw;
+    color: #555;
 }
 
 footer {
@@ -336,30 +338,28 @@ footer {
     
       .item-reseñas-container {
         display: grid;
-        grid-template-columns: 120px 1fr; /* Dos columnas: imagen y texto */
-        grid-template-rows: auto auto auto; /* Tres filas: título, estrellas, reseña */
-        gap: 8px; /* Espaciado entre filas y columnas */
-        background-color: #f9f9f9; /* Fondo claro */
-        border: 1px solid #ddd; /* Borde ligero */
-        border-radius: 8px; /* Bordes redondeados */
-        padding: 16px; /* Espaciado interno */
-        max-width: 600px; /* Ancho máximo */
-        margin: 16px auto; /* Centrado horizontal */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+        grid-template-columns: 120px 1fr; 
+        grid-template-rows: auto auto auto; 
+        gap: 8px; 
+        
+        padding: 16px; 
+        max-width: 600px; 
+        margin: 16px auto; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
     
     .producto-imagen {
-        grid-row: 1 / span 3; /* La imagen ocupa las tres filas */
+        grid-row: 1 / span 3; 
     }
     
     .producto-imagen img {
-        width: 100%; /* Ajusta al tamaño de su celda */
-        height: auto; /* Mantiene la proporción */
+        width: 100%; 
+        height: auto; 
         border-radius: 8px;
     }
     
     .producto-titulo {
-        grid-column: 2; /* Empieza en la segunda columna */
+        grid-column: 2; 
         grid-row: 1;
         font-size: 18px;
         font-weight: bold;
@@ -372,9 +372,9 @@ footer {
     
     .producto-estrellas {
       display: grid;
-        grid-column: 2; /* Empieza en la segunda columna */
+        grid-column: 2; 
         grid-row: 3;
-        color: #f5c518; /* Amarillo para las estrellas */
+        color: #f5c518; 
         font-size: 16px;
     }
 
@@ -384,9 +384,8 @@ footer {
     
     .reseña-texto {
       display: grid;
-        grid-column: 1/ span 2; /* Empieza en la segunda columna */
+        grid-column: 1/ span 2; 
         color: #555;
-        font-size: 14px;
         line-height: 1.5;
     }
 
