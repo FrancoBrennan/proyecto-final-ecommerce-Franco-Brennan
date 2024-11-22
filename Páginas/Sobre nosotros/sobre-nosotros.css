@@ -126,14 +126,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2vh;
   }
 
   .sobre-nosotros img{
-    width: 90%;
-    max-height: 30vh;
+    width: 100%;
+    max-width: 1024px;
+    height: 22vh;
     object-fit: cover;
-    margin-bottom: 3vh;
   }
 
   .texto {
@@ -142,27 +141,35 @@
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     width: 80%;
-    margin-bottom: 20px;
+    max-width: 1024px;
+    margin-bottom: 4vh;
+    margin-top: 5vh;
 }
 
 .reseñas{
     background-color: #24303c;
     height: auto;
-    display: grid;
-    justify-items: center;
-    gap: 1em;
-    padding-bottom: 4vh;
+    padding-bottom: 6vh;
+}
+
+.reseñas-contenedor{
+  background-color: #24303c;
+  display: grid;
+  justify-items: center;
+  gap: 1em;
+  margin-top: 7vh;
 }
 
 .reseñas h3{
-    margin: 2vh;
+  text-align: center;
     font-size: 1.3rem;
     color: white;
 }
 
 .item-reseñas-container{
     border:#BABAC4 solid 0.01px;
-    width: 90%;
+    width: 80%;
+    max-width: 300px;
     border-radius: 1vh;
     background-color: white;
     color: black;
@@ -170,22 +177,22 @@
     text-align: center;
 }
 
-.producto img{
+.producto-imagen img{
     width: 25vh;
     border-radius: 10%;
 }
 
-.producto  h5{
+.producto-titulo h5{
     align-self: center;
     font-size: em;
 }
 
-.producto p{
+.producto-estrellas p{
     color: rgb(235, 195, 16);
     font-size: 2.5vh;
 }
 
-.reseña-texto{
+.reseña-texto p{
     text-align: start;
     margin-left: 5vw;
 }
@@ -239,4 +246,200 @@ footer {
     display: flex;
     gap: 2.5vw;
   }
+
+  @media screen and (min-width: 424px) {
+    
+    .logo {
+      width: 18vw; 
+    }
+
+    .sobre-nosotros img{
+      height: 25vh;
+    }
+    
+  }
+    
+    @media screen and (min-width: 768px) {
+      .logo {
+        max-width: 20vw; 
+      }
+    
+      header{
+        height: 15vh;
+      }
+    
+      header button, i{
+        font-size: 3rem;
+      }
+
+      .sobre-nosotros img{
+        height: 50vh;
+      }
+
+      .reseñas-contenedor{
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .item-reseñas-container{
+        margin-bottom: 5vh;
+      }
+    
+    }
+    
+    @media (min-width: 992px) {
+      
+      header{
+        height: 16vh;
+      }
+    
+      .logo {
+        width: 16vw; 
+      }
+    
+      header li{
+        font-size: 2rem;
+      }
+    
+      .icono-buscar{
+        display: none;
+      }
+    
+    
+      .nav-list{
+        align-items: center;
+      }
+    
+      .abrir-menu,
+      .cerrar-menu {
+          display: none;
+      }
+    
+      .nav {
+          opacity: 1;
+          visibility: visible;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          box-shadow: none;
+          background-color: transparent;
+          padding: 0;
+      }
+    
+      .nav-list {
+          flex-direction: row;
+          gap: 1rem;
+      }
+    
+      .nav-list li a {
+          color: #ffffff;
+      }
+    
+      .item-reseñas-container {
+        display: grid;
+        grid-template-columns: 120px 1fr; /* Dos columnas: imagen y texto */
+        grid-template-rows: auto auto auto; /* Tres filas: título, estrellas, reseña */
+        gap: 8px; /* Espaciado entre filas y columnas */
+        background-color: #f9f9f9; /* Fondo claro */
+        border: 1px solid #ddd; /* Borde ligero */
+        border-radius: 8px; /* Bordes redondeados */
+        padding: 16px; /* Espaciado interno */
+        max-width: 600px; /* Ancho máximo */
+        margin: 16px auto; /* Centrado horizontal */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    }
+    
+    .producto-imagen {
+        grid-row: 1 / span 3; /* La imagen ocupa las tres filas */
+    }
+    
+    .producto-imagen img {
+        width: 100%; /* Ajusta al tamaño de su celda */
+        height: auto; /* Mantiene la proporción */
+        border-radius: 8px;
+    }
+    
+    .producto-titulo {
+        grid-column: 2; /* Empieza en la segunda columna */
+        grid-row: 1;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .producto-titulo h5{
+      margin-top: 2vh;
+    }
+    
+    .producto-estrellas {
+      display: grid;
+        grid-column: 2; /* Empieza en la segunda columna */
+        grid-row: 3;
+        color: #f5c518; /* Amarillo para las estrellas */
+        font-size: 16px;
+    }
+
+    .producto-estrellas p{
+      margin-bottom: 2vh;
+    }
+    
+    .reseña-texto {
+      display: grid;
+        grid-column: 1/ span 2; /* Empieza en la segunda columna */
+        color: #555;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .reseña-texto p{
+      margin-left: 0;
+      margin-top: 1vh;
+
+
+    }
+    
+    
+    
+    }
+    
+    
+    @media screen and (min-width: 1024px) {
+    
+      .abrir-menu,
+      .cerrar-menu {
+          display: none;
+      }
+    
+      .nav {
+          opacity: 1;
+          visibility: visible;
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          box-shadow: none;
+          background-color: transparent;
+          padding: 0;
+      }
+    
+      .nav-list {
+          flex-direction: row;
+          gap: 1rem;
+      }
+    
+      .nav-list li a {
+          color: #ffffff;
+      }
+    }
+    
+    @media screen and (min-width: 1440px) {
+    
+      .logo {
+        width: 10vw; 
+      }
+
+      .sobre-nosotros img{
+        margin-top: 4vh;
+      }
+    
+      
+    }
 
