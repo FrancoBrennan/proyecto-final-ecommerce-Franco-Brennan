@@ -129,65 +129,192 @@ header {
   object-fit: cover;
 }
 
-
-.productos h2{
-  text-align: center;
-  margin-top: 2rem;
-}
-
-.card-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 2rem 0 2rem 0;
-}
-
-.card{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 80vw;
-  max-width: 300px;
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
-  margin: 1rem;  
-}
-
-.card img{
-  width: 100%;
-  max-height: 30vh;
-}
-
-.card-content{
+.categorias{
+  background-color: #f4f4f4;
   padding: 1rem;
 }
 
-.card-content h3{
-  font-size: 1.5rem;
+.categorias h2{
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 5vh;
+}
+
+.procesadores{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/AMD\ RYZEN.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.procesadores span{
   margin-bottom: 1vh;
-  margin-top: 0;
+  font-weight: bold;
 }
 
-.card-content p{
-  color: #666;
-  font-size: 0.9rem;
-  line-height: 1.3;
+.notebooks{
+  background-image:
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent), /* Sombra interna */
+    url("/assets/notebooks.png");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
 }
 
-.card-content .btn{
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: #333;
-  text-decoration: none;
-  border-radius: 0.2rem;
-  color: #fff;
+.notebooks span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.auriculares{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/AURICULARES\ 2.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.auriculares span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.celulares{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/celulaes.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.celulares span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.mouses{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/mouse.png");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.mouses span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.teclados{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/teclados.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.teclados span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+.tablets{
+  background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
+    url("/assets/TABLETS\ 2.jpg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center; /* Centra la imagen */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  border-radius: 10px;
+}
+
+.tablets span{
+  margin-bottom: 1vh;
+  font-weight: bold;
+}
+
+/* Efecto de zoom en la imagen de fondo */
+.procesadores:hover,
+.notebooks:hover,
+.auriculares:hover,
+.celulares:hover,
+.mouses:hover,
+.teclados:hover,
+.tablets:hover {
+  background-size: 110%; /* Amplía el tamaño de la imagen de fondo al 110% */
+  transition: background-size 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Configuración inicial de las imágenes de fondo */
+.procesadores,
+.notebooks,
+.auriculares,
+.celulares,
+.mouses,
+.teclados,
+.tablets {
+  background-size: 100%; /* Tamaño inicial de la imagen */
+  background-position: center; /* Mantiene centrada la imagen */
+  transition: background-size 0.3s ease-in-out; /* Transición inicial */
 }
 
 .info-container {
   display: flex;
   flex-direction: column;
+  margin-top: 1vh;
 }
 
 .info{
@@ -333,6 +460,12 @@ footer {
   max-width: 20vw; 
 }
 
+.card img{
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+}
+
 
 }
 
@@ -347,10 +480,6 @@ footer {
 
   header button, i{
     font-size: 3rem;
-  }
-
-  #carouselExampleAutoplaying {
-    margin-bottom: 4vh;
   }
 
   #carouselExampleAutoplaying .carousel-item img {
@@ -396,6 +525,34 @@ footer {
 
   .info-texto p{
     font-size: 1rem;
+  }
+
+  .categories-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .categories-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, fr);
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .procesadores{
+    grid-row: 1 / span 2;
+    height: 51vh;
+    width: 30vw;
+  }
+
+  .notebooks, 
+  .celulares, 
+  .auriculares,
+  .mouses,
+  .teclados,
+  .tablets{
+    height: 25vh;
   }
 
 }
@@ -468,6 +625,8 @@ footer {
     display: flex;
     justify-content: center;
   }
+
+  
 
 }
 
