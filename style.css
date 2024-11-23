@@ -150,6 +150,7 @@ header {
   background-image: 
     linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
     url("/assets/AMD\ RYZEN.jpg");
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
   width: 100%;
   height: 30vh;
   background-size: cover;
@@ -284,31 +285,6 @@ header {
 .tablets span{
   margin-bottom: 1vh;
   font-weight: bold;
-}
-
-/* Efecto de zoom en la imagen de fondo */
-.procesadores:hover,
-.notebooks:hover,
-.auriculares:hover,
-.celulares:hover,
-.mouses:hover,
-.teclados:hover,
-.tablets:hover {
-  background-size: 110%; /* Amplía el tamaño de la imagen de fondo al 110% */
-  transition: background-size 0.3s ease-in-out; /* Transición suave */
-}
-
-/* Configuración inicial de las imágenes de fondo */
-.procesadores,
-.notebooks,
-.auriculares,
-.celulares,
-.mouses,
-.teclados,
-.tablets {
-  background-size: 100%; /* Tamaño inicial de la imagen */
-  background-position: center; /* Mantiene centrada la imagen */
-  transition: background-size 0.3s ease-in-out; /* Transición inicial */
 }
 
 .info-container {
