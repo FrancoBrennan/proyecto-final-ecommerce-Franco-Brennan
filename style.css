@@ -13,7 +13,7 @@ header {
   /* height: 15vh; */
   display: flex; /* Usa flexbox para alinear el logo y el título */
   align-items: center; /* Centra verticalmente los elementos */
-  justify-content: space-between; /* Centra horizontalmente el contenido del encabezado */
+  justify-content: space-between;
   padding: 2rem;
   height: 3vh;
 }
@@ -31,19 +31,8 @@ header {
 .carrito-compras {
   font-size: 1.6rem;
   color: #ffffff;
-}
-
-.icono-buscar{
-  font-size: 1.5rem;
-  background-color: transparent;
-  display: block;
-  border: 0;
-  color: #ffffff;
-}
-
-.icono-buscar.invisible{
-  opacity: 0;
-  visibility: hidden;
+  margin-left: auto; /* Empuja este elemento hacia la derecha */
+  margin-right: 1rem; /* Añade espacio entre el carrito y el botón de menú */
 }
 
 .nav-list {
@@ -71,6 +60,9 @@ header {
 .abrir-menu {
   color: #f8f3f3;
   font-size: 2rem;
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .cerrar-menu {
@@ -96,6 +88,7 @@ header {
   z-index: 100;
   right: -100%; /* El menú comienza fuera de la pantalla */
   transition: right 0.3s ease, opacity 0.3s ease; /* Transición suave */
+  
 }
 
 .nav.visible {
@@ -290,7 +283,7 @@ header {
 .info-container {
   display: flex;
   flex-direction: column;
-  margin-top: 1vh;
+  margin-top: 4vh;
 }
 
 .info{
@@ -421,6 +414,21 @@ footer {
   gap: 5vw;
 }
 
+@media screen and (min-width: 375px) {
+
+  #carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 22vh;
+    object-fit: cover; 
+  }
+  
+  .logo {
+    max-width: 20vw; 
+  }
+  
+  
+}
+
 
 @media screen and (min-width: 424px) {
 
@@ -436,13 +444,6 @@ footer {
   max-width: 20vw; 
 }
 
-.card img{
-  width: 100%;
-  height: 30vh;
-  object-fit: cover;
-}
-
-
 }
 
 @media screen and (min-width: 768px) {
@@ -452,6 +453,14 @@ footer {
 
   header{
     height: 15vh;
+  }
+
+  .abrir-menu{
+    margin-right: 2vh;
+  }
+
+  .carrito-compras{
+    margin-right: 4vh;
   }
 
   header button, i{
@@ -531,6 +540,14 @@ footer {
     height: 25vh;
   }
 
+  .nav.visible{
+    width: 35vw;
+  }
+
+  .nav-list{
+    font-size: 1.5rem;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -547,8 +564,11 @@ footer {
     font-size: 2rem;
   }
 
-  .icono-buscar{
-    display: none;
+  .carrito-compras{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    padding-bottom: 2vw;
   }
 
   #carouselExampleAutoplaying .carousel-item img {
@@ -633,6 +653,10 @@ footer {
   .nav-list li a {
       color: #ffffff;
   }
+
+  .carrito-compras{
+    margin-right: 1vh;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -649,6 +673,11 @@ footer {
     width: 90vw;
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .carrito-compras{
+    padding-bottom: 2vh;
+  }
+  
 }
 
 

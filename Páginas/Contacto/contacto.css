@@ -28,19 +28,8 @@
   .carrito-compras {
     font-size: 1.6rem;
     color: #ffffff;
-  }
-  
-  .icono-buscar{
-    font-size: 1.5rem;
-    background-color: transparent;
-    display: block;
-    border: 0;
-    color: #ffffff;
-  }
-  
-  .icono-buscar.invisible{
-    opacity: 0;
-    visibility: hidden;
+    margin-left: auto; /* Empuja este elemento hacia la derecha */
+    margin-right: 1rem; /* Añade espacio entre el carrito y el botón de menú */
   }
   
   .nav-list {
@@ -276,6 +265,20 @@ footer {
   gap: 5vw;
 }
 
+@media screen and (min-width: 375px) {
+
+  #carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 22vh;
+    object-fit: cover; 
+  }
+  
+  .logo {
+    max-width: 20vw; 
+  }
+  
+}
+
 
 @media screen and (min-width: 424px) {
   
@@ -292,6 +295,14 @@ footer {
   
     header{
       height: 15vh;
+    }
+
+    .abrir-menu{
+      margin-right: 2vh;
+    }
+  
+    .carrito-compras{
+      margin-right: 4vh;
     }
   
     header button, i{
@@ -332,6 +343,14 @@ footer {
     #comunicate-con-nosotros{
       border-left: none;
     }
+
+    .nav.visible{
+      width: 35vw;
+    }
+  
+    .nav-list{
+      font-size: 1.5rem;
+    }
   
   }
   
@@ -347,6 +366,13 @@ footer {
   
     header li{
       font-size: 2rem;
+    }
+
+    .carrito-compras{
+      display: flex;
+      align-items: center;
+      padding: 0;
+      padding-bottom: 2vw;
     }
   
     .icono-buscar{
@@ -413,6 +439,10 @@ footer {
     .nav-list li a {
         color: #ffffff;
     }
+
+    .carrito-compras{
+      margin-right: 1vh;
+    }
   }
   
   @media screen and (min-width: 1440px) {
@@ -421,7 +451,9 @@ footer {
       width: 10vw; 
     }
   
-    
+    .carrito-compras{
+      padding-bottom: 2vh;
+    }
   
     
   }

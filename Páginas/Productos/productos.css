@@ -30,19 +30,8 @@ body {
   .carrito-compras {
     font-size: 1.6rem;
     color: #ffffff;
-  }
-  
-  .icono-buscar{
-    font-size: 1.5rem;
-    background-color: transparent;
-    display: block;
-    border: 0;
-    color: #ffffff;
-  }
-  
-  .icono-buscar.invisible{
-    opacity: 0;
-    visibility: hidden;
+    margin-left: auto; /* Empuja este elemento hacia la derecha */
+    margin-right: 1rem; /* Añade espacio entre el carrito y el botón de menú */
   }
   
   .nav-list {
@@ -249,19 +238,15 @@ body {
     gap: 5vw;
   }
 
+  @media screen and (min-width: 375px) {
 
-  @media screen and (min-width: 424px) {
-
-
-
-    
     
     .logo {
       max-width: 20vw; 
     }
     
     
-    }
+  }
     
     @media screen and (min-width: 768px) {
       .logo {
@@ -270,6 +255,14 @@ body {
     
       header{
         height: 15vh;
+      }
+
+      .abrir-menu{
+        margin-right: 2vh;
+      }
+    
+      .carrito-compras{
+        margin-right: 4vh;
       }
     
       header button, i{
@@ -288,6 +281,14 @@ body {
       .boton-agregar-carrito i{
         font-size: 1.6rem;
       }
+
+      .nav.visible{
+        width: 35vw;
+      }
+    
+      .nav-list{
+        font-size: 1.5rem;
+      }
     
     }
     
@@ -304,9 +305,12 @@ body {
       header li{
         font-size: 2rem;
       }
-    
-      .icono-buscar{
-        display: none;
+
+      .carrito-compras{
+        display: flex;
+        align-items: center;
+        padding: 0;
+        padding-bottom: 2vw;
       }
   
       .nav-list{
@@ -371,6 +375,10 @@ body {
       .nav-list li a {
           color: #ffffff;
       }
+
+      .carrito-compras{
+        margin-right: 1vh;
+      }
     }
     
     @media screen and (min-width: 1440px) {
@@ -381,6 +389,10 @@ body {
 
       .productos-container{
         grid-template-columns: repeat(4, 1fr);
+      }
+
+      .carrito-compras{
+        padding-bottom: 2vh;
       }
     
     }

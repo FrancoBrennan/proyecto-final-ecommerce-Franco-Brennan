@@ -1,7 +1,6 @@
 const nav = document.querySelector("#nav");
 const cerrar = document.querySelector("#cerrar");
 const abrir = document.querySelector("#abrir");
-const buscador = document.querySelector("#buscador");
 const overlay = document.querySelector("#overlay"); // Selecciona la superposición
 const body = document.body;
 
@@ -19,8 +18,4 @@ cerrar.addEventListener("click", () => {
 overlay.addEventListener("click", () => {
     nav.classList.remove("visible");
     overlay.classList.remove("visible");
-});
-
-buscador.addEventListener("click", () => {
-    buscador.classList.add("invisible");
 });
