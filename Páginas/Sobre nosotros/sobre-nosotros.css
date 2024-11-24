@@ -7,17 +7,16 @@
   header {
     background-color: #201f1f;
     color: white;
-    /* height: 15vh; */
-    display: flex; /* Usa flexbox para alinear el logo y el título */
-    align-items: center; /* Centra verticalmente los elementos */
-    justify-content: space-between; /* Centra horizontalmente el contenido del encabezado */
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
     padding: 2rem;
     height: 3vh;
   }
   
   .logo {
-    max-width: 25vw; /* Ajusta el tamaño del logo */
-    transition: transform 0.3s; /* Suaviza la transición del efecto */
+    max-width: 25vw; 
+    transition: transform 0.3s; 
   }
   
   
@@ -28,8 +27,8 @@
   .carrito-compras {
     font-size: 1.6rem;
     color: #ffffff;
-    margin-left: auto; /* Empuja este elemento hacia la derecha */
-    margin-right: 1rem; /* Añade espacio entre el carrito y el botón de menú */
+    margin-left: auto;
+    margin-right: 1rem; 
   }
   
   .nav-list {
@@ -81,7 +80,7 @@
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
     z-index: 100;
     right: -100%; /* El menú comienza fuera de la pantalla */
-    transition: right 0.3s ease, opacity 0.3s ease; /* Transición suave */
+    transition: right 0.3s ease, opacity 0.3s ease;
   }
   
   .nav.visible {
