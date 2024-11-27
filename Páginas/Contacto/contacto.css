@@ -163,6 +163,17 @@
   margin-bottom: 6vh;
 }
 
+.error-message {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.error-message.visible{
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 2vh;
+}
+
 .contact-container{
   display: flex;
   flex-direction: column;

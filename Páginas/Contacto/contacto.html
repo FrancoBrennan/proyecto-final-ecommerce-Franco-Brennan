@@ -48,27 +48,32 @@
 
     <main>
 
-      <form class="form-contact" action="https://formsubmit.co/franco.brennan1@gmail.com"" method="post">
+      <form class="form-contact" action="https://formsubmit.co/franco.brennan1@gmail.com" method="post">
 
         <h4>Contactanos</h4>
-
+    
         <input class="controls" type="text" name="nombre" id="nombres" placeholder="Ingrese su Nombre">
-        
+        <div class="error-message" id="error-nombres"></div> <!-- Mensaje de Error -->
+    
         <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-
+        <div class="error-message" id="error-correo"></div> 
+    
         <input class="controls" type="number" name="telefono" id="telefono" placeholder="Ingrese su Telefono">
-        
+        <div class="error-message" id="error-telefono"></div> 
+    
         <textarea class="controls" name="consulta" id="consulta" rows="2" placeholder="Escriba aquí su consulta..."></textarea>
-
+        <div class="error-message" id="error-consulta"></div> 
+    
         <select class="controls" name="motivo" id="motivo" aria-placeholder="Seleccionar opción">
           <option value="Consulta">Consulta</option>
           <option value="Quiero que me llamen">Quiero que me llamen</option>
           <option value="Soporte Técnico">Soporte Técnico</option>
         </select>
-        
+    
         <input class="boton" type="submit" value="Consultar">
-
-      </form>
+    
+    </form>
+    
 
       <section class="contacto">
 
@@ -167,6 +172,7 @@
 
 
     <script src="/main.js"></script>
+    <script src="/Páginas/Contacto/formulario.js"></script>
     <script src="https://kit.fontawesome.com/1cb579b6ec.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
