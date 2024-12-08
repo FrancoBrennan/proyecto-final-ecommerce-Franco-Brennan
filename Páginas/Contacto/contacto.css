@@ -56,6 +56,8 @@
   .abrir-menu {
     color: #f8f3f3;
     font-size: 2rem;
+    margin: 0;
+    padding: 0;
   }
   
   .cerrar-menu {
@@ -291,12 +293,10 @@ footer {
 
 
 @media screen and (min-width: 424px) {
-  
   .logo {
-    max-width: 20vw; 
+    max-width: 18vw; 
   }
-  
-  }
+}
   
   @media screen and (min-width: 768px) {
     .logo {
@@ -452,6 +452,12 @@ footer {
 
     .carrito-compras{
       margin-right: 1vh;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .logo {
+      width: 10vw; 
     }
   }
   

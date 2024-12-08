@@ -440,7 +440,7 @@ footer {
 }
 
 .logo {
-  max-width: 20vw; 
+  max-width: 18vw;  
 }
 
 }
@@ -658,6 +658,16 @@ footer {
   }
 }
 
+@media screen and (min-width: 1280px) {
+  .logo {
+    width: 10vw; 
+  }
+
+  #carouselExampleAutoplaying .carousel-item img {
+    height: 65vh; 
+  }
+}
+
 @media screen and (min-width: 1440px) {
 
   .logo {
@@ -665,7 +675,7 @@ footer {
   }
 
   #carouselExampleAutoplaying .carousel-item img {
-    height: 69vh; 
+    height: 78vh; 
   }
 
   .consultas-container{

@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "nombre": "Notebook IdeaPad 5 15.6\" táctil 16GB de Ram 512GB SSD Intel Core i7",
+        "precio": 1499999,
+        "imagen": "/assets/Lenovo ideapad.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "Apple iPhone 16 (128 GB) - Negro",
+        "precio": 1399999,
+        "imagen": "/assets/iphone 16 negro.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "Teclado Mecanico Redragon Kumara K552 RGB Outemu Blue ESP",
+        "precio": 40990,
+        "imagen": "/assets/Teclado redragon kumara 2.jpeg"
+    },
+    {
+        "id": 4,
+        "nombre": "Tablet 14,6'' Samsung Galaxy Tab S9 Ultra 12gb 256gb Amoled Color Grafito",
+        "precio": 1299990,
+        "imagen": "/assets/samsung galaxy tab 9 ultra.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "Logitech G Serie G Lightspeed G305 Black",
+        "precio": 41000,
+        "imagen": "/assets/mouse logitech g305.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "Auriculares gamer inalámbricos Logitech G Series G733 negro con luz rgb LED",
+        "precio": 289000,
+        "imagen": "/assets/Logitech G733.webp"
+    }
+]
