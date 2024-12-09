@@ -25,10 +25,32 @@
   }
   
   .carrito-compras {
+    position: relative; /* Posicionamos el contenedor relativo al ícono */
     font-size: 1.6rem;
     color: #ffffff;
     margin-left: auto; 
     margin-right: 1rem; 
+    text-decoration: none; /* Elimina subrayado */
+  }
+  
+  .carrito-compras span.contador {
+    display: none;
+    position: absolute; /* Se posiciona respecto al ícono */
+    top: 2px; /* Ajusta verticalmente */
+    right: -10px; /* Ajusta horizontalmente */
+    background-color: #4d4c4c;
+    padding: 1px 3px; /* Tamaño ajustado para parecer circular */
+    font-size: 10px; /* Reduce un poco el tamaño del texto */
+    color: #fff;
+    border-radius: 50%; /* Forma circular */
+    text-align: center; /* Centra el texto */
+    font-weight: bold; /* Hace que el número destaque */
+    min-width: 18px; /* Garantiza el tamaño mínimo */
+    height: 18px; /* Garantiza un círculo perfecto */
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    text-align: center;
   }
   
   .nav-list {
@@ -360,6 +382,14 @@ footer {
   
     .nav-list{
       font-size: 1.5rem;
+    }
+
+    .carrito-compras span.contador {
+      top: 8px; /* Ajusta verticalmente */
+      right: -10px; /* Ajusta horizontalmente */
+      padding: 7px 7px; /* Tamaño ajustado para parecer circular */
+      font-size: 14px; /* Reduce un poco el tamaño del texto */
+      height: 22px; /* Garantiza un círculo perfecto */
     }
   
   }

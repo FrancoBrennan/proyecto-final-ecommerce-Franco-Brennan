@@ -620,6 +620,10 @@ body {
       font-size: 20px !important;
     }
 
+    .icon i{
+      margin-left: 1vw;
+  }
+
     .subtotal{
       width: 98%;
       margin: auto;
