@@ -50,15 +50,20 @@
 
 
     <main>
-      <div class="container">
+      <div class="container-todo">
+
           <div class="steps">
-              <div class="step active">1</div>
-              <div class="line"></div>
-              <div class="step">2</div>
-              <div class="line"></div>
-              <div class="step">3</div>
-              <div class="line"></div>
-              <div class="step">4</div>
+            <div class="step active step-1">1</div>
+            <div class="step-text text-1">Ingresá CP</div> 
+            <div class="line line-1"></div>
+            <div class="step step-2">2</div>
+            <div class="step-text text-2">Envío</div> 
+            <div class="line line-2"></div>
+            <div class="step step-3">3</div>
+            <div class="step-text text-3">Forma de Pago</div> 
+            <div class="line line-3"></div>
+            <div class="step step-4">4</div>
+            <div class="step-text text-4">Pagar</div> 
           </div>
   
           <div class="container-productos">
@@ -88,7 +93,7 @@
                   </div>
 
                   <div class="product-delete">
-                    <button class="btn-delete">🗑️</button>
+                    <button class="btn-delete"><i class="bi bi-trash3-fill"></i></button>
                   </div>
 
               </div>
@@ -114,7 +119,7 @@
                 </div>
 
                 <div class="product-delete">
-                  <button class="btn-delete">🗑️</button>
+                  <button class="btn-delete"><i class="bi bi-trash3-fill"></i></button>
                 </div>
 
             </div>
@@ -131,7 +136,7 @@
               
               <div class="product-quantity">
                   <button class="btn-decrement">−</button>
-                  <input type="number" value="1" min="1">
+                  <span></span>
                   <button class="btn-increment">+</button>
               </div>
                   
@@ -140,12 +145,21 @@
               </div>
 
               <div class="product-delete">
-                <button class="btn-delete">🗑️</button>
+                <button class="btn-delete"><i class="bi bi-trash3-fill"></i></button>
               </div>
 
           </div>
+
+          
   
           </div>
+
+
+          <!-- Sección para mostrar el total -->
+          <div class="subtotal">
+            <p>Subtotal: <span id="total-price">$ 0</span></p>
+          </div>
+          
           
           <!-- Sección de envío -->
           <div class="container-envio">
@@ -154,20 +168,19 @@
               </div>
               <div class="shipping">
                   <div class="postal-code">
+
                       <input type="text" placeholder="Código postal">
-                      <span class="icon">🚚</span>
+                     
+                      <span class="icon"><i class="bi bi-truck"></i></span>
+
                   </div>
-                  <p>Ingresá tu código postal para calcular el costo de envío</p>
+                  <p class="postal-message">Ingresá tu código postal para calcular el costo de envío.</p>
               </div>
-              <div class="shipping-options">
-                  <button class="option">OCA DOMICILIO<br>$-</button>
-                  <button class="option">OCA SUCURSAL<br>$-</button>
-                  <button class="option active">DOMICILIO<br>$-</button>
-                  <button class="option">PICKIT SUCURSAL<br>$-</button>
+              
+              <div class="contenedor-continuar">
+                <button class="continuar">Continuar</button>
               </div>
-          </div> -->
-  
-          <button class="back-home">VOLVER AL HOME</button>
+          
       </div>
   </main>
   
@@ -228,6 +241,10 @@
         </div>
   
       </footer>
+
+
+      <script src="/main.js"></script>
+      <script src="carrito.js"></script>
     
 </body>
 </html>
