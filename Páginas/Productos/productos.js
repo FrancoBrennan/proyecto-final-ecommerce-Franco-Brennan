@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 productosContainer.innerHTML += productoHTML;
             });
             
+            actualizarContadores(obtenerCarrito());
 
         } catch (error) {
             console.error("Error cargando productos:", error);
@@ -113,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    actualizarContadores(obtenerCarrito());
+    
     cargarProductos();
     
 });
