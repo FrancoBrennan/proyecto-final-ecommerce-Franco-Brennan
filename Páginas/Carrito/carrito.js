@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoItemsContainer = document.querySelector(".container-productos");
     const carritoSuperior = document.querySelector(".carrito-compras span");
     const totalPriceElement = document.getElementById('total-price');
+    const continuarCompra = document.querySelector(".continuar")
     
 
     const obtenerCarrito = () => JSON.parse(localStorage.getItem("carrito")) || [];
@@ -10,6 +11,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const devolverObjetosCarrito = (carrito) => Object.values(carrito);
     const devolverIndiceCarrito = (carrito, productoId) => carrito.findIndex((item) => item.id == productoId);
 
+    const noHayProductos = () => {
+        
+        noProductos = `
+
+                <div class="contenedor-no-productos">
+
+                    <div class="titulo-no-productos"><p>No hay elementos en el carrito</p></div>
+
+                    <div class="contenedor-volver">
+                        <a href="/Páginas/Productos/productos.html"><button class="volver">Seguir comprando</button></a>
+                    </div>
+
+                </div>
+            `;
+
+            carritoItemsContainer.innerHTML += noProductos;
+
+            continuarCompra.style.display = "none"
+
+
+    }
+
     const renderCarrito = () => {
         const carrito = obtenerCarrito();
         carritoItemsContainer.innerHTML = "";
@@ -17,36 +40,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
         carritoItemsContainer.innerHTML = `<div class="titulo"><h2>Productos</h2></div>`;
 
-        // Aquí ya no haces el fetch, sino que directamente usas el carrito desde localStorage
-        const productos = devolverObjetosCarrito(carrito) // Suponiendo que carrito es un objeto de productos
+        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr.cantidad, 0);
 
-        productos.forEach((producto) => {
-            const subtotal = producto.precio * producto.cantidad;
-            total += subtotal;
+        if(totalProductos != 0){
 
-            const itemHTML = `
-                <div class="product" data-id="${producto.id}">
-                    <div class="product-img">
-                        <img src="${producto.imagen}" alt="Placa de Video">
-                    </div>
-                    <div class="product-details">
-                        <p>${producto.nombre}</p>
-                    </div>
-                    <div class="product-quantity">
-                        <button class="btn-decrement">−</button>
-                        <span class="quantity">${producto.cantidad}</span>
-                        <button class="btn-increment">+</button>
-                    </div>
-                    <div class="product-precio">
-                        <p class="price">$ ${producto.precio}</p>
-                    </div>
-                    <div class="product-delete">
-                        <button class="btn-delete"><i class="bi bi-trash3-fill"></i></button>
-                    </div>
-                </div>`;
+            // Aquí ya no haces el fetch, sino que directamente usas el carrito desde localStorage
+            const productos = devolverObjetosCarrito(carrito) // Suponiendo que carrito es un objeto de productos
 
-            carritoItemsContainer.innerHTML += itemHTML;
-        });
+            productos.forEach((producto) => {
+                const subtotal = producto.precio * producto.cantidad;
+                total += subtotal;
+
+                const itemHTML = `
+                    <div class="product" data-id="${producto.id}">
+                        <div class="product-img">
+                            <img src="${producto.imagen}" alt="Placa de Video">
+                        </div>
+                        <div class="product-details">
+                            <p>${producto.nombre}</p>
+                        </div>
+                        <div class="product-quantity">
+                            <button class="btn-decrement">−</button>
+                            <span class="quantity">${producto.cantidad}</span>
+                            <button class="btn-increment">+</button>
+                        </div>
+                        <div class="product-precio">
+                            <p class="price">$ ${producto.precio}</p>
+                        </div>
+                        <div class="product-delete">
+                            <button class="btn-delete"><i class="bi bi-trash3-fill"></i></button>
+                        </div>
+                    </div>`;
+
+                carritoItemsContainer.innerHTML += itemHTML;
+            });
+        }
+        else{
+
+            noHayProductos();
+
+        }
+
+        
 
         totalPriceElement.textContent = `$ ${total.toLocaleString()}`;
     };
@@ -87,12 +122,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(carrito.length === 0){
             localStorage.removeItem("carrito");
+            
+            noHayProductos();
         }
 
     };
 
     const actualizarContadores = (carrito) => {
-        const totalProductos = carrito.reduce((acc, curr) => acc + curr.cantidad, 0);
+    
+        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr.cantidad, 0);
     
         
         if (totalProductos != 0) {
@@ -176,8 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
     
     });
 
-    renderCarrito();
     actualizarContadores(obtenerCarrito());
+    renderCarrito();
     updateTotal();
 
 });

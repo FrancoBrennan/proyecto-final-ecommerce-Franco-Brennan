@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const carritoSuperior = document.querySelector(".carrito-compras span"); 
     let productos = [];
 
+    const obtenerCarrito = () => JSON.parse(localStorage.getItem("carrito")) || [];
+
     
     const cargarProductos = async () => {
         try {
@@ -34,10 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     </article>`;
                 productosContainer.innerHTML += productoHTML;
             });
-
-            // Cargar el carrito desde localStorage al iniciar y actualizar los contadores
-            const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
-            actualizarContadores(carritoGuardado);
+            
 
         } catch (error) {
             console.error("Error cargando productos:", error);
@@ -114,8 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    
+    actualizarContadores(obtenerCarrito());
     cargarProductos();
-
     
 });

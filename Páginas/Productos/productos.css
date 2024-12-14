@@ -331,11 +331,11 @@ body {
       }
 
       .carrito-compras span.contador {
-        top: 8px; /* Ajusta verticalmente */
-        right: -10px; /* Ajusta horizontalmente */
-        padding: 7px 7px; /* Tamaño ajustado para parecer circular */
-        font-size: 14px; /* Reduce un poco el tamaño del texto */
-        height: 22px; /* Garantiza un círculo perfecto */
+        top: 8px; 
+        right: -10px; 
+        padding: 7px 7px; 
+        font-size: 14px; 
+        height: 22px; 
       }
     
     }
@@ -343,26 +343,55 @@ body {
     @media (min-width: 992px) {
       
       header{
-        height: 16vh;
+        height: 10vh;
+        font-family: 'Poppins', sans-serif;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        color: white;
       }
     
       .logo {
-        width: 16vw; 
+        width: 10vw; 
       }
     
-      header li{
-        font-size: 2rem;
+      ul{
+        margin-bottom: 0.1rem !important;
+        padding-left: 1.8rem !important;
       }
-
+    
       .carrito-compras{
         display: flex;
         align-items: center;
-        padding: 0;
-        padding-bottom: 2vw;
+        padding-bottom: 0.4rem;
+        transition: color 0.4s ease;
+        margin-right: 0;
+      }
+    
+      .carrito-compras:hover{
+        color: #00bfff; /* Cambia el color al pasar el mouse */
+      }
+    
+      #carouselExampleAutoplaying .carousel-item img {
+        height: 60vh; 
       }
   
       .nav-list{
         align-items: center;
+      }
+
+      .nav-list li a {
+        transition: color 0.4s ease;
+      }
+    
+      .nav-list li a:hover {
+        color: #00bfff; /* Celeste al pasar el mouse */
       }
     
       .abrir-menu,
@@ -388,16 +417,34 @@ body {
     
       .nav-list li a {
           color: #ffffff;
+          font-size: 1.5rem;
+      }
+
+      .bi{
+        font-size: 2rem;
       }
     
       .productos-container{
         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      .carrito-compras span.contador {
+        top: 2px; 
+        right: -7px; 
+        padding: 7px 7px; 
+        font-size: 12px;
+        height: 18px;
+        width: 18px;
       }
     
     }
     
     
     @media screen and (min-width: 1024px) {
+
+      .logo {
+        width: 9vw; 
+      }
     
       .abrir-menu,
       .cerrar-menu {
@@ -427,22 +474,29 @@ body {
       .carrito-compras{
         margin-right: 1vh;
       }
+
+      ul{
+        padding-left: 1.5rem !important;
+      }
     }
 
     @media screen and (min-width: 1280px) {
       .logo {
-        width: 10vw; 
+        width: 7vw; 
+        margin-left: 1vw;
       }
     }
     
     @media screen and (min-width: 1440px) {
     
+      .logo {
+        width: 6vw; 
+      }
+
       .productos-container{
         grid-template-columns: repeat(4, 1fr);
       }
 
-      .carrito-compras{
-        padding-bottom: 2vh;
-      }
+      
     
     }

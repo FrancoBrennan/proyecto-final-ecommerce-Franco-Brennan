@@ -35,23 +35,27 @@ header {
   text-decoration: none; /* Elimina subrayado */
 }
 
+.carrito-compras span{
+  display: none;
+}
+
 .carrito-compras span.contador {
   display: none;
-  position: absolute; /* Se posiciona respecto al ícono */
-  top: 2px; /* Ajusta verticalmente */
-  right: -10px; /* Ajusta horizontalmente */
+  position: absolute; 
+  top: 2px; 
+  right: -10px; 
   background-color: #4d4c4c;
-  padding: 1px 3px; /* Tamaño ajustado para parecer circular */
-  font-size: 10px; /* Reduce un poco el tamaño del texto */
+  padding: 1px 3px; 
+  font-size: 10px; 
   color: #fff;
-  border-radius: 50%; /* Forma circular */
-  text-align: center; /* Centra el texto */
-  font-weight: bold; /* Hace que el número destaque */
-  min-width: 18px; /* Garantiza el tamaño mínimo */
-  height: 18px; /* Garantiza un círculo perfecto */
+  border-radius: 50%; 
+  text-align: center; 
+  font-weight: bold; 
+  min-width: 18px; 
+  height: 18px; 
   display: flex;
-  align-items: center; /* Centrado vertical */
-  justify-content: center; /* Centrado horizontal */
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
 }
 
@@ -141,6 +145,8 @@ header {
   height: 15vh;
   object-fit: cover;
 }
+
+
 
 .categorias{
   background-color: #f4f4f4;
@@ -572,11 +578,11 @@ footer p{
   }
 
   .carrito-compras span.contador {
-    top: 8px; /* Ajusta verticalmente */
-    right: -10px; /* Ajusta horizontalmente */
-    padding: 7px 7px; /* Tamaño ajustado para parecer circular */
-    font-size: 14px; /* Reduce un poco el tamaño del texto */
-    height: 22px; /* Garantiza un círculo perfecto */
+    top: 8px; 
+    right: -10px; 
+    padding: 7px 7px; 
+    font-size: 14px;
+    height: 22px; 
   }
 
 }
@@ -584,31 +590,62 @@ footer p{
 @media (min-width: 992px) {
   
   header{
-    height: 16vh;
+    height: 10vh;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0); /* Fondo semi-transparente */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    color: white;
+    transition: 0.5s;
   }
 
   .logo {
-    width: 16vw; 
+    width: 10vw; 
   }
 
   header li{
     font-size: 2rem;
+    transition: 0.5s;
+  }
+
+  ul{
+    margin-bottom: 0.5rem !important;
+    padding-left: 1.8rem !important;
   }
 
   .carrito-compras{
     display: flex;
     align-items: center;
-    padding: 0;
-    padding-bottom: 2vw;
+    padding-bottom: 0.4rem;
+    transition: color 0.4s ease;
+    margin-right: 0;
+  }
+
+  .carrito-compras:hover{
+    color: #00bfff; /* Cambia el color al pasar el mouse */
   }
 
   #carouselExampleAutoplaying .carousel-item img {
-    height: 45vh; 
+    height: 60vh; 
   }
-
 
   .nav-list{
     align-items: center;
+  }
+
+  .nav-list li a {
+    transition: color 0.4s ease;
+  }
+
+  .nav-list li a:hover {
+    color: #00bfff; /* Celeste al pasar el mouse */
   }
 
   .abrir-menu,
@@ -634,6 +671,12 @@ footer p{
 
   .nav-list li a {
       color: #ffffff;
+      font-size: 1.5rem;
+  }
+
+
+  .bi{
+    font-size: 2rem;
   }
 
   .productos-container{
@@ -653,12 +696,27 @@ footer p{
     justify-content: center;
   }
 
-  
+  .carrito-compras span.contador {
+    top: 2px; 
+    right: -7px; 
+    padding: 7px 7px; 
+    font-size: 12px;
+    height: 18px;
+    width: 18px;
+  }
 
 }
 
 
 @media screen and (min-width: 1024px) {
+
+  .logo {
+    width: 9vw; 
+  }
+
+  #carouselExampleAutoplaying .carousel-item img {
+    height: 62vh; 
+  }
 
   .abrir-menu,
   .cerrar-menu {
@@ -688,26 +746,32 @@ footer p{
   .carrito-compras{
     margin-right: 1vh;
   }
+
+  ul{
+    padding-left: 1.5rem !important;
+  }
+  
 }
 
 @media screen and (min-width: 1280px) {
   .logo {
-    width: 10vw; 
+    width: 7vw; 
+    margin-left: 1vw;
   }
 
   #carouselExampleAutoplaying .carousel-item img {
-    height: 65vh; 
+    height: 75vh; 
   }
 }
 
 @media screen and (min-width: 1440px) {
 
   .logo {
-    width: 10vw; 
+    width: 6vw; 
   }
 
   #carouselExampleAutoplaying .carousel-item img {
-    height: 78vh; 
+    height: 100vh; 
   }
 
   .consultas-container{
@@ -715,9 +779,6 @@ footer p{
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .carrito-compras{
-    padding-bottom: 2vh;
-  }
 
 }
 
