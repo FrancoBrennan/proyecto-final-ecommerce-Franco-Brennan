@@ -21,35 +21,35 @@
   
   
   .logo:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(1.1); 
   }
   
   .carrito-compras {
-    position: relative; /* Posicionamos el contenedor relativo al ícono */
+    position: relative; 
     font-size: 1.6rem;
     color: #ffffff;
     margin-left: auto; 
     margin-right: 1rem; 
-    text-decoration: none; /* Elimina subrayado */
+    text-decoration: none; 
   }
   
   .carrito-compras span.contador {
     display: none;
-    position: absolute; /* Se posiciona respecto al ícono */
-    top: 2px; /* Ajusta verticalmente */
-    right: -10px; /* Ajusta horizontalmente */
+    position: absolute; 
+    top: 2px; 
+    right: -10px; 
     background-color: #4d4c4c;
-    padding: 1px 3px; /* Tamaño ajustado para parecer circular */
-    font-size: 10px; /* Reduce un poco el tamaño del texto */
+    padding: 1px 3px; 
+    font-size: 10px; 
     color: #fff;
-    border-radius: 50%; /* Forma circular */
-    text-align: center; /* Centra el texto */
-    font-weight: bold; /* Hace que el número destaque */
-    min-width: 18px; /* Garantiza el tamaño mínimo */
-    height: 18px; /* Garantiza un círculo perfecto */
+    border-radius: 50%; 
+    text-align: center; 
+    font-weight: bold; 
+    min-width: 18px; 
+    height: 18px; 
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
   }
   
@@ -182,8 +182,8 @@
 .item-reseñas-container{
     background-color: #f9f9f9;
     border: 1px solid #ddd; 
-    border-radius: 8px; 
-    width: 80%;
+    border-radius: 8px;
+    width: 85%;
     max-width: 300px;
     background-color: white;
     color: black;
@@ -334,11 +334,11 @@ footer {
       }
 
       .carrito-compras span.contador {
-        top: 8px; /* Ajusta verticalmente */
-        right: -10px; /* Ajusta horizontalmente */
-        padding: 7px 7px; /* Tamaño ajustado para parecer circular */
-        font-size: 14px; /* Reduce un poco el tamaño del texto */
-        height: 22px; /* Garantiza un círculo perfecto */
+        top: 8px; 
+        right: -10px; 
+        padding: 7px 7px;
+        font-size: 14px; 
+        height: 22px; 
       }
     
     }
@@ -364,7 +364,7 @@ footer {
         width: 10vw; 
       }
 
-      ul{
+      .nav ul{
         margin-bottom: 0.1rem !important;
         padding-left: 1.8rem !important;
       }
@@ -422,15 +422,21 @@ footer {
       .bi{
         font-size: 2rem;
       }
+
+      .reseñas-contenedor{
+        width: 100%;
+        max-width: 1024px;
+        margin: auto;
+        margin-top: 5vh;
+      }
     
       .item-reseñas-container {
         display: grid;
         grid-template-columns: 120px 1fr; 
         grid-template-rows: auto auto auto; 
-        gap: 8px; 
-        
+        gap: 1vh; 
         padding: 16px; 
-        max-width: 600px; 
+        max-width: 400px; 
         margin: 16px auto; 
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     }
