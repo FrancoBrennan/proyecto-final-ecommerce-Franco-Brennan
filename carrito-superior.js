@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const actualizarContadores = () => {
 
-        const carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     
-        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr, 0);
+        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr.cantidad, 0);
     
         
         if (totalProductos != 0) {
@@ -20,8 +20,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
         
         document.querySelectorAll(".contador-card").forEach((contador) => {
+            
             const id = contador.getAttribute("data-id");
-            contador.textContent = carrito[id] || "";
+
+            const producto = carrito.find((item) => item.id == id);
+
+            contador.textContent = producto ? producto.cantidad : "";
+
         });
     };
 

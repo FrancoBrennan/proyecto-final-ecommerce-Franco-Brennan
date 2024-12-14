@@ -23,35 +23,35 @@ body {
   
   
   .logo:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    transform: scale(1.1); 
   }
   
   .carrito-compras {
-    position: relative; /* Posicionamos el contenedor relativo al ícono */
+    position: relative; 
     font-size: 1.6rem;
     color: #ffffff;
     margin-left: auto; 
     margin-right: 1rem; 
-    text-decoration: none; /* Elimina subrayado */
+    text-decoration: none; 
   }
   
   .carrito-compras span.contador {
     display: none;
-    position: absolute; /* Se posiciona respecto al ícono */
-    top: 2px; /* Ajusta verticalmente */
-    right: -10px; /* Ajusta horizontalmente */
+    position: absolute; 
+    top: 2px; 
+    right: -10px; 
     background-color: #4d4c4c;
-    padding: 1px 3px; /* Tamaño ajustado para parecer circular */
-    font-size: 10px; /* Reduce un poco el tamaño del texto */
+    padding: 1px 3px; 
+    font-size: 10px; 
     color: #fff;
-    border-radius: 50%; /* Forma circular */
-    text-align: center; /* Centra el texto */
-    font-weight: bold; /* Hace que el número destaque */
-    min-width: 18px; /* Garantiza el tamaño mínimo */
-    height: 18px; /* Garantiza un círculo perfecto */
+    border-radius: 50%; 
+    text-align: center; 
+    font-weight: bold; 
+    min-width: 18px; 
+    height: 18px; 
     display: flex;
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
   }
   
@@ -164,10 +164,16 @@ body {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .2);
     margin: 1rem;  
   }
+
+  .card-img {
+    border-bottom: none; /* O ajusta el color/fondo */
+    background: transparent; /* Elimina cualquier fondo no deseado */
+}
   
-  .card img{
+  .card-img img{
     width: 100%;
-    max-height: 30vh;
+    height: 30vh;
+    object-fit: contain;
   }
   
   .card-content{
@@ -218,6 +224,10 @@ body {
     padding-top: 2vh; 
     width: 100%; 
     z-index: 10;
+  }
+
+  footer p{
+    margin-bottom: 0;
   }
   
   .footer-info{

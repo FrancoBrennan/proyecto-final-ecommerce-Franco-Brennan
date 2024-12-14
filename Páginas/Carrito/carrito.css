@@ -366,28 +366,28 @@ body {
 }
 
 .continuar {
-  background-color: #4CAF50; /* Color principal del botón */
-  color: white; /* Color del texto */
-  font-size: 16px; /* Tamaño del texto */
-  font-weight: bold; /* Texto en negrita */
-  padding: 8px 18px; /* Espaciado interno */
-  border: none; /* Sin bordes */
-  border-radius: 8px; /* Bordes redondeados */
-  cursor: pointer; /* Icono de mano al pasar */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-  transition: all 0.3s ease; /* Transiciones suaves */
+  background-color: #4CAF50; 
+  color: white; 
+  font-size: 16px; 
+  font-weight: bold; 
+  padding: 8px 18px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+  transition: all 0.3s ease; 
 }
 
 .continuar:hover {
-  background-color: #45a049; /* Color al pasar el cursor */
-  transform: translateY(-2px); /* Leve elevación */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+  background-color: #45a049; 
+  transform: translateY(-2px); 
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
 }
 
 .continuar:active {
-  background-color: #3e8e41; /* Color más oscuro al presionar */
-  transform: translateY(0); /* Regresa a su lugar */
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra reducida */
+  background-color: #3e8e41; 
+  transform: translateY(0); 
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); 
 }
 
   footer {
@@ -396,6 +396,10 @@ body {
     padding-top: 2vh; 
     width: 100%; 
     z-index: 10;
+  }
+
+  footer p{
+    margin-bottom: 0;
   }
   
   .footer-info{

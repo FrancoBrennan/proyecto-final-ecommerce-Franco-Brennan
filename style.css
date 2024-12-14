@@ -391,6 +391,10 @@ footer {
   width: 100%; 
 }
 
+footer p{
+  margin-bottom: 0;
+}
+
 .footer-info{
   border-bottom: 0.5px solid white;
 }

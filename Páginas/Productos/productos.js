@@ -1,18 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
     const productosContainer = document.querySelector(".productos-container");
     const carritoSuperior = document.querySelector(".carrito-compras span"); 
+    let productos = [];
 
     
     const cargarProductos = async () => {
         try {
             const respuesta = await fetch("./productos.json");
-            const productos = await respuesta.json();
+            productos = await respuesta.json();
 
             productos.forEach((producto) => {
                 const productoHTML = `
                     <article class="card-container">
                         <div class="card">
-                            <img src="${producto.imagen}" alt="${producto.nombre}">
+                            <div class="card-img">
+                                <img src="${producto.imagen}" alt="${producto.nombre}">
+                            </div>
                             <div class="card-content">
                                 <h4>${producto.nombre}</h4>
                                 <div class="bottom-card">
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             // Cargar el carrito desde localStorage al iniciar y actualizar los contadores
-            const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || {};
+            const carritoGuardado = JSON.parse(localStorage.getItem("carrito")) || [];
             actualizarContadores(carritoGuardado);
 
         } catch (error) {
@@ -43,13 +46,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
     const agregarAlCarrito = (id) => {
-        let carrito = JSON.parse(localStorage.getItem("carrito")) || {};
+        const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+        console.log(carrito)
 
-        
-        if (carrito[id]) {
-            carrito[id]++;
-        } else {
-            carrito[id] = 1;
+        const index = carrito.findIndex((item) => item.id == id);
+
+        if (index == -1) {
+            
+            const elemento = productos.find((producto) => producto.id == id);
+            console.log(elemento);
+      
+            const producto = {
+              id: elemento.id,
+              nombre: elemento.nombre,
+              precio: elemento.precio,
+              imagen: elemento.imagen,
+              cantidad: 1,
+            };
+      
+            carrito.push(producto);
+
+        } 
+        else {
+            carrito[index].cantidad++;
         }
 
         
@@ -61,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const actualizarContadores = (carrito) => {
     
-        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr, 0);
+        const totalProductos = Object.values(carrito).reduce((acc, curr) => acc + curr.cantidad, 0);
     
         
         if (totalProductos != 0) {
@@ -76,8 +95,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
         
         document.querySelectorAll(".contador-card").forEach((contador) => {
+            
             const id = contador.getAttribute("data-id");
-            contador.textContent = carrito[id] || "";
+
+            const producto = carrito.find((item) => item.id == id);
+
+            contador.textContent = producto ? producto.cantidad : "";
+
         });
     };
 
@@ -85,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("click", (event) => {
         if (event.target.closest(".boton-agregar-carrito")) {
             const productoId = event.target.closest(".boton-agregar-carrito").getAttribute("data-id");
+
             agregarAlCarrito(productoId);
         }
     });
