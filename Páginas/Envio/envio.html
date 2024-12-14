@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GadgetZone</title>
 
-    <link rel="icon" href="/assets/icono.ico" type="image/x-icon" />
-
-    <link rel="stylesheet" href="sobre-nosotros.css" />
+    <link rel="stylesheet" href="./envio.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
@@ -18,16 +16,16 @@
 
     <header>
         <a href="/index.html"
-          ><img src="/assets/logo.png" alt="GadgetZone Logo" class="logo"
+          ><img src="/assets/icono.ico" alt="GadgetZone Logo" class="logo"
         /></a>
-
-        <a href="/Páginas/Carrito/carrito.html" class="carrito-compras">
+  
+         <a href="/Páginas/Carrito/carrito.html" class="carrito-compras">
           <i class="bi bi-cart3"></i>
-          <span style="display: none;" class="contador"></span> <!-- Utilizo estilos en el HTML en ese caso así no se produce un "parpadeo" del contador cada vez que se accede a la página -->
+          <span style="display: none;" class="contador"></span> <!-- Utilizo estilos en el HTML en este caso así no se produce un "parpadeo" del contador cada vez que se accede a la página -->
         </a>
   
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
-
+  
         <div class="overlay" id="overlay"></div>
   
         <nav class="nav" id="nav">
@@ -45,28 +43,34 @@
   
         </nav>
       </header>
+  
+  
+      <main>
 
-    <section class="sobre-nosotros">
+        <div class="container-todo">
+  
+            <div class="steps">
+              <div class="step step-1">1</div>
+              <div class="step-text text-1">Ingresá CP</div> 
+              <div class="line line-1"></div>
+              <div class="step active step-2">2</div>
+              <div class="step-text text-2">Envío</div> 
+              <div class="line line-2"></div>
+              <div class="step step-3">3</div>
+              <div class="step-text text-3">Forma de Pago</div> 
+              <div class="line line-3"></div>
+              <div class="step step-4">4</div>
+              <div class="step-text text-4">Pagar</div> 
+            </div>
 
-        <img src="/assets/fondo gamer.jpg" alt="">
 
-        <div class="texto">
-            <h2>Sobre Nosotros</h2>
-            <p>En <strong>GadgetZone</strong>, nos apasiona la tecnología y ofrecemos una amplia selección de hardware para computadoras, notebooks, auriculares, mouse, teclados y celulares. Nuestro objetivo es brindarte productos de calidad y un servicio excepcional.</p>
-            <p>Con años de experiencia en el sector, estamos aquí para ayudarte a encontrar el hardware perfecto para tus necesidades. ¡Descubre todo lo que tenemos para ofrecerte y mejora tu experiencia tecnológica con nosotros!</p>
+            <div class="envio-coming-soon">
+                <img class="fondo-transparente" src="/assets/coming-soon-Photoroom-Photoroom.png" alt="En desarrollo...">
+            </div>
+
         </div>
-    </section>
 
-    <section class="reseñas">
-
-      <h3>Reseñas de Nuestros Clientes</h3>
-
-      <div class="reseñas-contenedor">
-
-      </div>
-
-    </section>
-
+    </main>
 
     <footer>
 
@@ -76,7 +80,7 @@
   
             <li>
   
-              <a href="/Páginas/Productos/productos.html">PRODUCTOS</a>
+              <a href="">PRODUCTOS</a>
   
             </li>
   
@@ -117,22 +121,15 @@
         </div>
   
         <div class="copyright">
-  
           <p>&copy;Copyright 2024</p>
-  
         </div>
   
-  
-  
-        
       </footer>
-    
-    <script src="/main.js"></script>
-    <script src="/carrito-superior.js"></script>
-    <script src="./reseñas.js"></script>
-    <script src="https://kit.fontawesome.com/1cb579b6ec.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
+
+      <script src="/main.js"></script>
+      <script src="carrito.js"></script>
+      <script src="/scroll.js"></script>
     
 </body>
 </html>

@@ -1,0 +1,47 @@
+{
+    "reseñas": [
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      },
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      },
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      },
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      },
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      },
+      {
+        "imagen": "/assets/auriculares.png",
+        "titulo": "Logitech G305",
+        "estrellas": "★★★★★",
+        "autor": "@Juan_Pérez",
+        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
+      }
+    ]
+  }
+  
