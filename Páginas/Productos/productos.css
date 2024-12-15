@@ -282,11 +282,11 @@ footer p {
 
 @media screen and (min-width: 768px) {
   .logo {
-    max-width: 20vw;
+    max-width: 12vw;
   }
 
   header {
-    height: 15vh;
+    height: 10vh;
   }
 
   .abrir-menu {
@@ -299,7 +299,7 @@ footer p {
 
   header button,
   i {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .productos h2 {
@@ -427,6 +427,25 @@ footer p {
     height: 18px;
     width: 18px;
   }
+
+  .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para elevación */
+  }
+
+  .card-content h4 {
+    transition: color 0.3s ease; /* Transición para cambio de color */
+  }
+
+  /* Efecto Hover: Solo elevación */
+  .card:hover {
+    transform: translateY(-10px); /* Eleva ligeramente la tarjeta */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  }
+
+  .card:hover h4 {
+    color: #10c9cf; /* Cambia el color del título */
+  }
+
 }
 
 @media screen and (min-width: 1024px) {

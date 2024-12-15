@@ -185,13 +185,14 @@ header {
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 85%;
+  height: 55vh;
   max-width: 300px;
-  height: 60vh;
   background-color: white;
   color: black;
   display: block;
   text-align: center;
   margin: auto;
+  padding: 0.5vh;
 }
 
 .producto-imagen img {
@@ -281,6 +282,10 @@ footer p {
   .logo {
     max-width: 20vw;
   }
+
+  .item-reseñas-container {
+    height: 53vh;
+  }
 }
 
 @media screen and (min-width: 424px) {
@@ -294,12 +299,13 @@ footer p {
 }
 
 @media screen and (min-width: 768px) {
+  
   .logo {
-    max-width: 20vw;
+    max-width: 12vw;
   }
 
   header {
-    height: 15vh;
+    height: 10vh;
   }
 
   .abrir-menu {
@@ -312,7 +318,7 @@ footer p {
 
   header button,
   i {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .sobre-nosotros img {
@@ -439,7 +445,7 @@ footer p {
     max-width: 400px;
     margin: 16px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 300px;
+    height: 32vh;
   }
 
   .reseña-texto p {

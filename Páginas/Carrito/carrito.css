@@ -432,6 +432,10 @@ body {
   font: 400 1rem Montserrat, sans-serif !important;
 }
 
+.container-envio{
+  margin-bottom: 3vh;
+}
+
   footer {
     background-color: #201f1f; 
     color: white; 
@@ -494,7 +498,9 @@ body {
     }
 
     
-    
+    .container-envio{
+      margin-bottom: 3vh;
+    }
     
   }
 
@@ -506,25 +512,26 @@ body {
   }
     
 @media screen and (min-width: 768px) {
-    .logo {
-     max-width: 20vw;       
-    }
-    
-    header{
-        height: 15vh;
-    }
+  .logo {
+    max-width: 12vw;
+  }
 
-    .abrir-menu{
-        margin-right: 2vh;
-    }
-    
-    .carrito-compras{
-        margin-right: 4vh;
-    }
-    
-    header, button, i{
-    font-size: 3rem;
-    }
+  header {
+    height: 10vh;
+  }
+
+  .abrir-menu {
+    margin-right: 2vh;
+  }
+
+  .carrito-compras {
+    margin-right: 4vh;
+  }
+
+  header button,
+  i {
+    font-size: 2rem;
+  }
 
     .nav.visible{
         width: 35vw;

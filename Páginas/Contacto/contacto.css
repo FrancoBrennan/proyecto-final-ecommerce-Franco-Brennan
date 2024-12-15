@@ -329,23 +329,24 @@ footer p{
   
   @media screen and (min-width: 768px) {
     .logo {
-      max-width: 20vw; 
+      max-width: 12vw;
     }
   
-    header{
-      height: 15vh;
+    header {
+      height: 10vh;
     }
-
-    .abrir-menu{
+  
+    .abrir-menu {
       margin-right: 2vh;
     }
   
-    .carrito-compras{
+    .carrito-compras {
       margin-right: 4vh;
     }
   
-    header button, i{
-      font-size: 3rem;
+    header button,
+    i {
+      font-size: 2rem;
     }
 
     .contact-container{

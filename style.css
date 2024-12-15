@@ -381,6 +381,10 @@ footer p {
   color: white;
 }
 
+.footer-info ul{
+  padding-left: 0 !important;
+}
+
 .redes-sociales {
   text-decoration: none;
   list-style-type: none;
