@@ -1,47 +1,46 @@
 {
-    "reseñas": [
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      },
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      },
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      },
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      },
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      },
-      {
-        "imagen": "/assets/auriculares.png",
-        "titulo": "Logitech G305",
-        "estrellas": "★★★★★",
-        "autor": "@Juan_Pérez",
-        "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra de auriculares."
-      }
-    ]
-  }
-  
+  "reseñas": [
+    {
+      "imagen": "/assets/mouse logitech g305.jpg",
+      "titulo": "Logitech G305",
+      "estrellas": "★★★★★",
+      "autor": "@Juan_Pérez",
+      "texto": "Excelente servicio y productos de calidad. Estoy muy satisfecho con mi compra del mouse."
+    },
+    {
+      "imagen": "/assets/Lenovo ideapad.webp",
+      "titulo": "Notebook IdeaPad 5",
+      "estrellas": "★★★★★",
+      "autor": "@Carla_Gomez",
+      "texto": "La notebook es rápida y eficiente, ideal para trabajo y entretenimiento. La pantalla táctil funciona perfecto."
+    },
+    {
+      "imagen": "/assets/iphone 16 negro.webp",
+      "titulo": "Apple iPhone 16",
+      "estrellas": "★★★★★",
+      "autor": "@Lucas_Martinez",
+      "texto": "Increíble dispositivo, la calidad y rendimiento son insuperables. La cámara es fantástica."
+    },
+    {
+      "imagen": "/assets/Teclado redragon kumara 2.jpeg",
+      "titulo": "Teclado Redragon Kumara",
+      "estrellas": "★★★★☆",
+      "autor": "@Sofia_Lopez",
+      "texto": "Buen teclado mecánico, las teclas tienen un buen recorrido y el RGB es muy llamativo."
+    },
+    {
+      "imagen": "/assets/samsung galaxy tab 9 ultra.webp",
+      "titulo": "Samsung Galaxy Tab S9 Ultra",
+      "estrellas": "★★★★★",
+      "autor": "@Marcos_Rivera",
+      "texto": "La mejor tablet que he tenido, perfecta para trabajar y ver contenido multimedia. La pantalla Amoled es espectacular."
+    },
+    {
+      "imagen": "/assets/Logitech G733.webp",
+      "titulo": "Auriculares Logitech G733",
+      "estrellas": "★★★★☆",
+      "autor": "@Carlos_Sanchez",
+      "texto": "Cómodos y con un excelente sonido. Las luces RGB le dan un toque moderno. Gran compra."
+    }
+  ]
+}
