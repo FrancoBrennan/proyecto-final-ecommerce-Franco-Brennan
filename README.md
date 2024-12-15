@@ -58,6 +58,8 @@ git clone https://github.com/tu-usuario/tu-repositorio.git
 
 ---
 
+```
+
 ## Estructura del Proyecto 📄
 
 TP-INTEGRADOR/
@@ -95,3 +97,5 @@ TP-INTEGRADOR/
 ├── 📄 main.js # Script principal
 ├── 📄 scroll.js # Script para funcionalidades de scroll
 └── 📄 README.md # Documentación
+
+```
