@@ -58,9 +58,9 @@ git clone https://github.com/tu-usuario/tu-repositorio.git
 
 ---
 
-```
-
 ## Estructura del Proyecto 📄
+
+```
 
 TP-INTEGRADOR/
 │
