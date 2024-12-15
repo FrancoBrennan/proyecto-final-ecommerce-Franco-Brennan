@@ -179,12 +179,14 @@ header {
 }
 
 .item-reseñas-container {
+  display: flex;
+  justify-content: space-between;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 85%;
   max-width: 300px;
-  height: 370px;
+  height: 60vh;
   background-color: white;
   color: black;
   display: block;
@@ -211,8 +213,8 @@ header {
 
 .reseña-texto p {
   text-align: start;
-  margin-left: 3vw;
   color: #555;
+  margin-left: 2vw;
 }
 
 footer {
@@ -437,7 +439,11 @@ footer p {
     max-width: 400px;
     margin: 16px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: auto;
+    height: 300px;
+  }
+
+  .reseña-texto p {
+    margin-left: 0.5vw;
   }
 
   .producto-imagen {
@@ -482,7 +488,6 @@ footer p {
   }
 
   .reseña-texto p {
-    margin-left: 0;
     margin-top: 1vh;
   }
 
