@@ -165,6 +165,10 @@ header {
   margin-top: 5vh;
 }
 
+.categories-container a{
+  text-decoration: none;
+}
+
 .procesadores{
   background-image: 
     linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent),
@@ -181,7 +185,7 @@ header {
   border-radius: 10px;
 }
 
-.procesadores span{
+.categoria{
   margin-bottom: 1vh;
   font-weight: bold;
 }
@@ -201,10 +205,7 @@ header {
   border-radius: 10px;
 }
 
-.notebooks span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .auriculares{
   background-image: 
@@ -221,10 +222,7 @@ header {
   border-radius: 10px;
 }
 
-.auriculares span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .celulares{
   background-image: 
@@ -241,10 +239,7 @@ header {
   border-radius: 10px;
 }
 
-.celulares span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .mouses{
   background-image: 
@@ -261,10 +256,7 @@ header {
   border-radius: 10px;
 }
 
-.mouses span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .teclados{
   background-image: 
@@ -281,10 +273,7 @@ header {
   border-radius: 10px;
 }
 
-.teclados span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .tablets{
   background-image: 
@@ -301,10 +290,7 @@ header {
   border-radius: 10px;
 }
 
-.tablets span{
-  margin-bottom: 1vh;
-  font-weight: bold;
-}
+
 
 .info-container {
   display: flex;
@@ -730,14 +716,12 @@ footer p{
     width: 18px;
   }
   
- 
-  
-  .categories-container div {
+  .categories-container a {
     position: relative;
     overflow: hidden;
   }
   
-  .categories-container div::before {
+  .categories-container a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -751,12 +735,12 @@ footer p{
     transition: transform 0.4s ease-in-out; 
   }
   
-  .categories-container div:hover::before {
+  .categories-container a:hover::before {
     transform: scale(1.1); /* Zoom al pasar el cursor */
   }
 
-  .categories-container div span {
-    z-index: 1; 
+  .categories-container .categoria {
+    z-index: 10; 
   }
 
 }
