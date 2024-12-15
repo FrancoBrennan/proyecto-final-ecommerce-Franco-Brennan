@@ -53,7 +53,7 @@ Si tienes sugerencias, no dudes en compartirlas.
 Clona este repositorio con el siguiente comando:
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
+git clone https://github.com/FrancoBrennan/proyecto-final-ecommerce-Franco-Brennan.git
 ```
 
 ---
